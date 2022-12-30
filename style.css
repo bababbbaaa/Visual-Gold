@@ -30,15 +30,6 @@
     font-display: swap;
   }
   
-  /* @keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } */
-  
   html {
     height: 100%;
   }
@@ -121,7 +112,6 @@
     margin: 0;
 }
 
-
 .supinfo-data {
     display: flex;
     gap: 0.5rem;
@@ -139,8 +129,12 @@
 .supinfo-data__social {
     display: flex;
     gap: 0 1.5rem;
-
     align-items: center;
+}
+
+.facebook-header,
+.instagram-header {
+    fill: #fff;
 }
 
 .supinfo-data__text-link,
@@ -572,7 +566,8 @@
     gap: 0 1rem;
 }
 
-.supinfo-data__social-instagram .cls-1{
+.facebook-footer,
+.instagram-footer {
     fill:#b5292c;
 }
 
