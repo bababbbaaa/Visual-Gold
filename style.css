@@ -94,6 +94,8 @@
     background: white;
     width: 100vw;
     z-index: 1;
+    border-bottom: solid 0.4vh rgba(51, 51, 51, 0.5);
+    transition: all 0.3s;
 }
 
 .main-header__supinfo {
@@ -103,23 +105,33 @@
 .supinfo-container {
     display: flex;
     justify-content: space-between;
-    padding: 0.2rem 0;
+    padding: 0.4rem 0;
     align-items: center;
-
     font-family: inherit;
     font-weight: 300;
     color: white;
     text-transform: uppercase;
+    transition: all 0.3s;
 }
 
+/*  */
+.main-header-out {
+    transform: translateY(-27%);
+}
+
+/* .supinfo-container-out {
+    transform: translateY(-100%);
+} */
+
+/*  */
 .supinfo-text {
     margin: 0;
+    font-size: 0.9vw;
 }
 
 .supinfo-data {
     display: flex;
     gap: 0.5rem;
-
     align-items: center;
 }
 
@@ -143,10 +155,11 @@
 
 .supinfo-data__text-link,
 .supinfo-data__social-tel {
+    font-size: 0.9vw;
     color: white;
 }
 
-.main-header__menu {
+.navigation__menu {
     display: flex;
     flex-wrap: wrap;
     padding: 0.5rem 0;
@@ -161,7 +174,7 @@
 
 .menu-link {
     display: flex;
-    gap: 0 2rem;
+    gap: 0 1.5vw;
     align-items: center;
 }
 
@@ -177,13 +190,14 @@
 .nav__item-link {
     font-family: inherit;
     font-weight: 700;
+    font-size: 0.9vw;
     color:#000000;
     text-transform: uppercase;
 }
 
 .menu-link__client--list {
     display: flex;
-    gap: 0 1rem;
+    gap: 0 1vw;
 }
 
 .menu-link__client-button {
@@ -201,22 +215,40 @@
 /* MAIN */
 /* SLIDER */
 .main {
-    margin-top: 6%;
+    margin-top: 18vh;
 }
 
 .header-slider {
     margin-bottom: 3rem;
 }
 
+.slider {
+    position: relative;
+}
+
 .slider__wrapper--slide {
     display: flex;
     justify-content: space-between;
-}
-
-.slide__info {
     background-image: url('./source/img/Фон\ слайдер-100.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    height: 80vh;
+}
+
+.slide {
+    display: none;
+    transition: all 0.3s;
+    transition-delay: 0.5s;
+
+}
+
+.slide[data-active-slide] {
+    display: flex;
+    transition: opacity 0.5s;
+    transition-delay: 0.5s;
+}
+
+.slide__info {
     width: 50vw;
     display: flex;
     align-items: flex-end;
@@ -226,7 +258,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 66%;
     height: 100%;
     margin-left: 9%;
 
@@ -234,7 +266,6 @@
 }
 
 .slide__image {
-    position: relative;
     width: 50vw;
     overflow: hidden;
 }
@@ -242,12 +273,12 @@
 .slide__image img {
     width: auto;
     min-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .slide__image--scroll {
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 6vh;
     right: 3rem;
     display: flex;
     width: 8rem;
@@ -285,7 +316,7 @@
 .slide__info--subtitle {
     font-family: inherit;
     font-weight: 700;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     text-transform: uppercase;
 }
 
@@ -295,18 +326,18 @@
 
     font-family: inherit;
     font-weight: 700;
-    font-size: 2.7vw;
+    font-size: 3.8vw;
     text-transform: uppercase;
 }
 
 .slide__info--text {
-    font-size: 1vw;
+    font-size: 1.1vw;
     line-height: 1.5vw;
     margin-bottom: 2.5rem;
 }
 
 .slide__info--button {
-    font-size: 1vw;
+    font-size: 1.2vw;
     color:white;
 }
 
@@ -329,7 +360,7 @@
 .about__wrapper--info-title {
     font-family: inherit;
     font-weight: 700;
-    font-size: 1.8vw;
+    font-size: 2vw;
 }
 
 .info-text {
@@ -345,7 +376,7 @@
     margin-top: 0;
     font-family: inherit;
     font-weight: 400;
-    font-size: 0.9vw;
+    font-size: 1vw;
 }
 
 .info-button {
@@ -356,7 +387,7 @@
 .info-button__link {
     font-family: inherit;
     font-weight: 700;
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: #000;
 }
 
@@ -366,7 +397,11 @@
 
 /* CATEGORIES */
 .categories {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 7vh;
+    background-image: url("./source/img/Фон\ галерея-100.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
 }
 
 .categories__head {
@@ -378,14 +413,14 @@
 .categories__head-title {
     font-family: inherit;
     font-weight: 700;
-    font-size: 1.8vw;
+    font-size: 2vw;
     text-transform: uppercase;
 }
 
 .categories__head-links {
     font-family: inherit;
     font-weight: 700;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     text-transform: uppercase;
     color: #000;
 }
@@ -429,11 +464,11 @@
 
 .card__title {
     margin: 0;
-    width: 73%;
+    width: 74%;
     position: relative;
     font-family: inherit;
     font-weight: 700;
-    font-size: 0.9vw;
+    font-size: 1vw;
     text-transform: uppercase;
     color: white;
 }
@@ -479,7 +514,7 @@
     margin: 0;
     white-space: nowrap;
     font-family: inherit;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1vw;
     text-transform: uppercase;
     color: white;
@@ -488,6 +523,7 @@
 .address-footer__text {
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
 }
 
@@ -496,6 +532,7 @@
     margin-bottom: 1rem;
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
 }
 
@@ -507,6 +544,7 @@
     margin-bottom: 0.5rem;
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
 }
 
@@ -515,11 +553,12 @@
     padding-bottom: 0.5rem;
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
 }
 
 .contact-footer__title {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1vw;
 }
 
 .contact-footer__phone {
@@ -527,12 +566,14 @@
     padding-bottom: 0.5rem;
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
 }
 
 .contact-footer__phone-text {
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
 }
 
@@ -544,6 +585,7 @@
 .subscription-footer__text {
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
 }
 
@@ -553,10 +595,11 @@
 }
 
 .subscription-footer__form-input {
+    margin: 0.5rem 0 1rem;
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
-    margin: 0.5rem 0 1rem;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #b9b9b9;
@@ -568,11 +611,12 @@
 }
 
 .subscription-footer__form-button {
+    padding: 0.5rem 1.5rem;
     width: min-content;
+    font-size: 1vw;
+    color: white;
     border: none;
     background: #b5292c;
-    color: white;
-    padding: 0.5rem 1.5rem;
 }
 
 .supinfo__wrapper {
@@ -593,7 +637,7 @@
     font-family: inherit;
     font-weight: 400;
     color: white;
-    font-size: 0.9vw;
+    font-size: 1vw;
 }
 
 .supinfo__wrapper--info-name,
@@ -601,6 +645,7 @@
 .supinfo__wrapper--info-oferta {
     border-right: 1px dashed #ffffff61;
     padding-right: 1rem;
+    font-size: 1vw;
 }
 
 .supinfo__wrapper--info-list {
@@ -616,8 +661,8 @@
 .developers-name__text {
     font-family: inherit;
     font-weight: 400;
+    font-size: 1vw;
     color: white;
-    font-size: 0.9vw;
 }
 
 .nav-footer__border {
@@ -631,18 +676,28 @@
 @media (max-width: 1080px) {
     /* HEADER */
     .main-header {
-        position: relative;
+        border: none;
+    }
+
+    .main-header-out{
+        transform: none;
     }
     .main-header__supinfo {
         display: none;
     }
 
-    .main-header__menu {
-        height: 85px;
-        padding: 0;
+    .logo-header__img {
+        max-width: 23vw;
+        min-width: 100px;
     }
 
-    .main-header__menu-link {
+    .navigation__menu {
+        height: 85px;
+        padding: 0;
+        flex-wrap: nowrap;
+    }
+
+    .navigation__menu-link {
         position: relative;
         flex-direction: column;
     }
@@ -655,11 +710,11 @@
 
     .menu-link__auth-mobil {
         position: absolute;
-        top: 9.4vh;
-        right: -5.6vw;
+        top: 55px;
+        right: -45.6vw;
         z-index: 1;
         order: 2;
-        width: 40vw;
+        width: 80vw;
         display: flex;
         place-self: flex-start;
         justify-content: space-between;
@@ -670,7 +725,7 @@
 
     .menu-link__auth-mobil__span {
         font-family: inherit;
-        font-weight: 700;
+        font-weight: 500;
         color: #000000;
         text-transform: uppercase;
         font-size: 2.2vw;
@@ -679,7 +734,7 @@
 
     .menu-link__nav {
         position: absolute;
-        top: 21vh;
+        top: 18vh;
         right: -5.6vw;    
         z-index: 1;
         order: 3;
@@ -691,14 +746,14 @@
 
     .menu-link__info-mobil {
         position: absolute;
-        top: 57vh;
-        right: -5.6vw;
+        top: 52vh;
+        right: -20.6vw;
         z-index: 1;
         order: 4;
         display: flex;
         flex-direction: column;
         place-self: flex-start;
-        width: 35vw;
+        width: 50vw;
         padding: 3vw 56.5vw 3vw 3vw;
         background-color: #c3c3c3f7;
     }
@@ -714,10 +769,14 @@
     .info-mobil__email,
     .info-mobil__phone:nth-child(3) {
         margin-bottom: 3vh;
+        font-weight: 500;
+        font-size: 3.5vw;
+    
     }
 
     .info-mobil__phone {
-        font-size: 2.5vw;
+        font-weight: 500;
+        font-size: 3.5vw;
     }
 
     .nav__list {
@@ -731,8 +790,7 @@
     .nav-header__border {
         display: block;
         width: 91.5vw;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0.6rem;
         border-bottom: 1px solid #a4a3a3;
     }    
 
@@ -743,8 +801,8 @@
         position: absolute;
         top: 0.2vh;
         right: 0vw;
-        width: calc(45px + 0.1vw);
-        height: calc(30px + 0.1vw);
+        width: 30px;
+        height: 24px;
         padding: 0;
         cursor: pointer;
         background-color: transparent;
@@ -754,10 +812,10 @@
     .menu-link__client-button::before {
         content: "";
         position: absolute;
-        width: 8vw;
-        height: 0.4vh;
+        width: 30px;
+        height: 2px;
         background-color: #000;
-        box-shadow: 0 14px 0 0 #000, 0 28px 0 #000;
+        box-shadow: 0 11px 0 0 #000, 0 23px 0 #000;
         transition: 0.3s;
     }
 
@@ -787,15 +845,13 @@
     .menu-link__opened .menu-link__client-button::before {
         content: "";
         position: absolute;
-        top: 4vw;
-        left: -3px;
-        width: calc(40px + 0.1vw);
-        height: calc(3px + 0.1vw);
+        top: 11px;
+        left: 0px;
+        width: 30px;
+        height: 2px;
         background-color: #000;
         /* transition: 0.3s; */
     }
-
-    /*  */
 
     .link__auth {
         display: none;
@@ -806,16 +862,18 @@
     }
 
     .menu-link__auth-mobil__span {
-        font-size: 2.2vw;
+        font-size: 3.5vw;
         color: #000;
     }
 
     .menu-link__client--list {
-        margin-right: 17vw;
+        margin-right: 12vw;
+        gap: 0 2vw;
     }
 
     .nav__item-link {
-        font-size: 2.2vw;
+        font-weight: 500;
+        font-size: 3.5vw;
         line-height: 6vh;
     }
 
@@ -826,7 +884,7 @@
 
     /* SLIDER */
     .main {
-        margin-top: 0;
+        margin-top: 85px;
     }
 
     .slider__wrapper--slide {
@@ -841,15 +899,14 @@
 
     .slide__info--wrapper {
         margin-left: 3%;
-        padding: 5vh 0;
     }
 
     .slide__info--subtitle {
-        font-size: 2.1vw;
+        font-size: 2.2vw;
     }
 
     .slide__info--title {
-        font-size: 4.7vw;
+        font-size: 5vw;
     }
 
     .slide__info--text {
@@ -906,9 +963,6 @@
     .categories {
         margin-bottom: 1rem;
         padding: 2vh 0 4vh;
-        background-image: url("./source/img/Фон\ галерея-100.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     .categories__head {
@@ -923,9 +977,9 @@
         display: none;
     }
 
-    .categories__cards:not(:first-child) {
+    /* .categories__cards:not(:first-child) {
         display: none;
-    }
+    } */
 
     .categories__wrapper {
         display: flex;
@@ -933,12 +987,25 @@
         padding-bottom: 3vh;
     }
 
+    .categories__cards {
+        display: none;
+        transition: all 0.3s;
+        transition-delay: 0.5s;
+    
+    }
+    
+    .categories__cards[data-active-card] {
+        display: flex;
+        transition: opacity 0.5s;
+        transition-delay: 0.5s;
+    }
+
     .card__link-img {
         width: 70vw;
     }
 
     .card__title {
-        width: 60%;
+        width: 70%;
         font-size: 3vw;
     }
 
@@ -998,7 +1065,7 @@
 
     .nav-footer__border {
         display: block;
-        width: 13vw;
+        width: 18vw;
         margin-bottom: 1.5rem;
         padding-bottom: 1rem;
         border-bottom: 1px dashed #ffffff61;
@@ -1007,8 +1074,8 @@
     .nav-footer__item-link {
         font-family: inherit;
         font-weight: 700;
-        font-size: 2.2vw;
-        line-height: 4vh;
+        font-size: 3.1vw;
+        line-height: 5.5vh;
         margin-top: 0;
         margin-bottom: 1rem;
         color: #fff;
@@ -1019,22 +1086,22 @@
         margin-bottom: 2vh;
         font-family: inherit;
         font-weight: 700;
-        font-size: 2.2vw;
+        font-size: 3.1vw;
     }
 
     .address-footer__text {
-        font-size: 2vw;
+        font-size: 3.1vw;
     }
 
     .address-footer__link {
-        font-size: 2vw;
+        font-size: 3.1vw;
     }
 
     .delivery-footer__title {
         padding-bottom: 1vh;
         font-family: inherit;
         font-weight: 700;
-        font-size: 2.2vw;
+        font-size: 3.1vw;
     }
 
     .delivery-footer__text,
@@ -1045,27 +1112,27 @@
     }
 
     .contact-footer__phone {
-        font-size: 2.2vw;
+        font-size: 4vw;
     }
 
     .contact-footer__phone-text {
         margin-bottom: 1vh;
-        font-size: 2vw;
+        font-size: 3.1vw;
     }
 
     .subscription-footer__title {
         margin-bottom: 3vh;
         font-family: inherit;
         font-weight: 700;
-        font-size: 2.2vw;
+        font-size: 3.1vw;
     }
 
     .subscription-footer__form-input {
-        font-size: 2vw;
+        font-size: 3.1vw;
     }
 
     .subscription-footer__form-button {
-        font-size: 2vw;
+        font-size: 3.1vw;
     }
 
     .supinfo__wrapper {
@@ -1082,15 +1149,15 @@
         margin-bottom: 0;
         padding-right: 0;
         border: none;
-        font-size: 2.2vw;
+        font-size: 3.1vw;
     }
 
     .supinfo__wrapper--info-privacyPolicy {
-        margin-bottom: 1vh;
+        margin-bottom: 3vh;
     }
     
     .supinfo__wrapper--info-text {
-        font-size: 2.2vw;
+        font-size: 3.1vw;
     }
 
     .supinfo__wrapper--developers-name {
@@ -1099,6 +1166,6 @@
     }
 
     .developers-name__text {
-        font-size: 2.2vw;
+        font-size: 3.1vw;
     }
 }
