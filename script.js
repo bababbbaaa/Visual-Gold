@@ -19,12 +19,12 @@ window.onscroll = function() {
 }
 
 
-const buttonsSlider = document.querySelectorAll("[data-sliders-direction]");
+const buttonsSlider = document.querySelectorAll("[data-slider-direction]");
 buttonsSlider.forEach((button) => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.slideDirection === "next" ? 1 : -1;
-    changeSlide(offset);
-  });
+    button.addEventListener("click", () => {
+      const offset = button.dataset.sliderDirection === "next" ? 1 : -1;
+      changeSlide(offset);
+    });
 });
 
 const changeSlide = (offset) => {
@@ -43,11 +43,11 @@ const changeSlide = (offset) => {
 
 const buttonsCard = document.querySelectorAll("[data-card-direction]");
 buttonsCard.forEach((button) => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.slideDirection === "next" ? 1 : -1;
-    changeSlide(offset);
+    button.addEventListener("click", () => {
+      const offset = button.dataset.cardDirection === "next" ? 1 : -1;
+      changeSlideCategories(offset);
+    });
   });
-});
 
 const changeSlideCategories = (offset) => {
   const cards = document.querySelector(".categories__wrapper");
@@ -63,5 +63,4 @@ const changeSlideCategories = (offset) => {
   delete activeCard.dataset.activeCard;
 };
 
-setInterval(changeSlide.bind(null, 1), 6000);
-setInterval(changeSlideCategories.bind(null, 1), 6000);
+setInterval(changeSlide.bind(null, 1), 10000);
