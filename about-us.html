@@ -69,13 +69,13 @@
                                             <a class="nav__item-link link" href="./about-us.html">
                                                 <span class="nav__active">О компании</span>
                                             </a>
-                                            <ul class="submenu__list submenu-about submenu list">
+                                            <!-- <ul class="submenu__list submenu-about submenu list">
                                                 <li class="nav__item-link submenu__item">
                                                     <a class="nav__item-link link" href="./about-us.html">
                                                         <span class="submenu__link">О нас</span>
                                                     </a>
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
                                         <li class="nav__item">
                                             <a class="nav__item-link link" href="./goods.html">
@@ -234,93 +234,97 @@
             <section class="benefits">
                 <div class="container">
                     <h3 class="benefits__title">Наши преимущества</h3>
+                    <div class="benefits__wrapper">
+                        <ul class="benefits__list list">
+                            <li class="benefits__item">
+                                <img class="benefits__item-img" width="175" height="142" src="./source/svg/icon-production.svg" alt="Изображение">
+                                <p class="benefits__item-text">Собственное производство</p>
+                            </li>
+                            <li class="benefits__item">
+                                <img class="benefits__item-img" width="174" height="143" src="./source/svg/icon-years.svg" alt="Изображение">
+                                <p class="benefits__item-text">15 лет на&nbsp;рынке</p>
+                            </li>
+                            <li class="benefits__item">
+                                <img class="benefits__item-img" width="141" height="134" src="./source/svg/icon-clients.svg" alt="Изображение">
+                                <p class="benefits__item-text">База из 350&nbsp;клиентов</p>
+                            </li>
+                            <li class="benefits__item">
+                                <img class="benefits__item-img" width="187" height="127" src="./source/svg/icon-delivery.svg" alt="Изображение">
+                                <p class="benefits__item-text">Доставка по&nbsp;всей&nbsp;России</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
-            <section class="categories">
+            <section class="news">
                 <div class="container">
                     <div class="categories__head">
-                        <h2 class="categories__head-title">Похожие товары</h2>
-                        <a class="categories__head-links link icon-arrow button" href="#" target="_blank">
-                            <span>Все товары</span>
-                            <svg aria-hidden="true" focusable="false" width="23" height="23" data-name="arrow"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                            </svg>
-                        </a>
+                        <h2 class="categories__head-title">Новости</h2>
                     </div>
-                    <div class="categories__wrapper">
-                        <div class="categories__cards" data-active-card>
-                            <div class="categories__card card">
-                                <a class="card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 1-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="categories__cards">
-                            <div class="categories__card card">
-                                <a class="card__link active-card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 2-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="categories__cards">
-                            <div class="categories__card card">
-                                <a class="card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 3-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="categories__cards">
-                            <div class="categories__card card">
-                                <a class="card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 4-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="categories__scroll scroll">
-                        <div class="categories__scroll-prev scroll-prev" data-card-direction="prev">
+                    <div class="news__wrapper">
+                        <div class="news__scroll scroll-prev" data-card-direction="prev">
                             <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor"
                                 data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
                                 <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                            </svg></div>
-                        <div class="categories__scroll-next scroll-next" data-card-direction="next">
+                            </svg>
+                        </div>
+                        <div class="news__wrapper-cards">
+                            <div class="news__cards" data-active-card>
+                                <div class="news__card">
+                                        <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                        <div class="news__text">
+                                            <h3 class="news__title">Новый принтер</h3>
+                                            <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент...</p>
+                                            <div class="news__text--footer">
+                                                <span class="news__text--footer-span">05.02.2023</span>
+                                                <a class="news__text--footer-link link icon-arrow button" href="#">
+                                                    <span>Подробнее</span>
+                                                    <svg aria-hidden="true" focusable="false" width="23" height="23" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="news__cards">
+                                <div class="news__card">
+                                    <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                        <div class="news__text">
+                                            <h3 class="news__title">Новый принтер</h3>
+                                            <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент...</p>
+                                            <div class="news__text--footer">
+                                                <span class="news__text--footer-span">05.02.2023</span>
+                                                <a class="news__text--footer-link link icon-arrow button" href="#">
+                                                    <span>Подробнее</span>
+                                                    <svg aria-hidden="true" focusable="false" width="23" height="23" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="news__cards">
+                                <div class="news__card">
+                                    <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                        <div class="news__text">
+                                            <h3 class="news__title">Новый принтер</h3>
+                                            <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент...</p>
+                                            <div class="news__text--footer">
+                                                <span class="news__text--footer-span">05.02.2023</span>
+                                                <a class="news__text--footer-link link icon-arrow button" href="#">
+                                                    <span>Подробнее</span>
+                                                    <svg aria-hidden="true" focusable="false" width="23" height="23" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__scroll scroll-next" data-card-direction="next">
                             <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor"
                                 data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
                                 <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
@@ -357,7 +361,7 @@
                         <nav class="main-footer__menu--nav nav-footer">
                             <ul class="nav-footer__list list">
                                 <li class="nav-footer__item">
-                                    <a class="nav-footer__item-link link" href="#">принтеры для печати</a>
+                                    <a class="nav-footer__item-link link" href="./printers.html">принтеры для печати</a>
                                 </li>
                                 <li class="nav-footer__item">
                                     <a class="nav-footer__item-link link" href="#">ленты</a>
