@@ -18,49 +18,84 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-
-const buttonsSlider = document.querySelectorAll("[data-slider-direction]");
-buttonsSlider.forEach((button) => {
-    button.addEventListener("click", () => {
-      const offset = button.dataset.sliderDirection === "next" ? 1 : -1;
-      changeSlide(offset);
-    });
+const slider = new Swiper('.header-slider', {
+  loop: true,
+  slidesPerView: 1, // показывать по 1 изображению
+	spaceBetween: 1000, // расстояние между слайдами
+	navigation: { // задаем кнопки навигации
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  parallax:true,
+  effect: "coverflow",
+  coverflow: {
+    rotate: 40,
+    stretch: 0,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
+  },
+  grabCursor: true, // менять иконку курсора
 });
 
-const changeSlide = (offset) => {
-  const slides = document.querySelector(".slides");
-  const activeSlide = slides.querySelector("[data-active-slide]");
-  let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-  newIndex =
-    newIndex < 0
-      ? slides.children.length - 1
-      : newIndex === slides.children.length
-      ? 0
-      : newIndex;
-  slides.children[newIndex].dataset.activeSlide = true;
-  delete activeSlide.dataset.activeSlide;
-};
+const news = new Swiper('.news__wrapper', {
+  loop: true,
+  slidesPerView: 3,
+	navigation: { 
+    nextEl: '.news__scroll-next',
+    prevEl: '.news__scroll-prev',
+  },
+  grabCursor: true,
+});
 
-const buttonsCard = document.querySelectorAll("[data-card-direction]");
-buttonsCard.forEach((button) => {
-    button.addEventListener("click", () => {
-      const offset = button.dataset.cardDirection === "next" ? 1 : -1;
-      changeSlideCategories(offset);
+const goods = new Swiper('.goods__slider', {
+  loop: true,
+  slidesPerView: 1,
+	navigation: { 
+    nextEl: '.goods__slider-button-next',
+    prevEl: '.goods__slider-button-prev',
+  },
+  grabCursor: true,
+});
+
+
+const smallWindow = 1080;
+let cardsWindow = null;
+let widthWindow;
+
+function initSwiper () {
+  if (!cardsWindow) {
+    cardsWindow = new Swiper('.cards', {
+      loop: true,
+      slidesPerView: 1,
+      navigation: {
+      	nextEl: '.categories__scroll-next',
+        prevEl: '.categories__scroll-prev',
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      // mousewheel: true, // можно прокручивать изображения курсором
+      grabCursor: true, // менять иконку курсора
+      parallax:true,
     });
-  });
-
-const changeSlideCategories = (offset) => {
-  const cards = document.querySelector(".categories__wrapper");
-  const activeCard = cards.querySelector("[data-active-card]");
-  let newIndex = [...cards.children].indexOf(activeCard) + offset;
-  newIndex =
-    newIndex < 0
-      ? cards.children.length - 1
-      : newIndex === cards.children.length
-      ? 0
-      : newIndex;
-  cards.children[newIndex].dataset.activeCard = true;
-  delete activeCard.dataset.activeCard;
+  }
 };
 
-setInterval(changeSlide.bind(null, 1), 10000);
+function destroySwiper () {
+  if (cardsWindow) {
+    cardsWindow.destroy();
+    cardsWindow = null;
+  }
+}
+
+function updateSize() {
+  if (window.innerWidth <= smallWindow) {
+    initSwiper()
+  } else {
+    destroySwiper()
+  }
+}
+
+window.addEventListener("resize", updateSize());

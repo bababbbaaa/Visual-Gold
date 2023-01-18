@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
+    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
     <link rel="stylesheet" href="./source/style.css">
 </head>
 
@@ -210,9 +211,9 @@
         </header>
         <main class="main">
             <h1 class="visually-hidden">Visual Gold</h1>
-            <section class="header-slider slider">
-                <div class="slider__wrapper slides">
-                    <div class="slider__wrapper--slide slide" data-active-slide>
+            <section class="header-slider swiper">
+                <div class="swiper-wrapper slider">
+                    <div class="swiper-slide slide">
                         <div class="slide__info">
                             <div class="slide__info--wrapper">
                                 <p class="slide__info--subtitle">Наше достижение</p>
@@ -230,10 +231,9 @@
                         </div>
                         <div class="slide__image">
                             <img src="./source/img/Фото главное.jpg" alt="Изображение">
-
                         </div>
                     </div>
-                    <div class="slider__wrapper--slide slide">
+                    <div class="swiper-slide slide">
                         <div class="slide__info">
                             <div class="slide__info--wrapper">
                                 <p class="slide__info--subtitle">Достижение</p>
@@ -253,7 +253,7 @@
                             <img src="./source/img/Фото 2-100.jpg" alt="Изображение">
                         </div>
                     </div>
-                    <div class="slider__wrapper--slide slide">
+                    <div class="swiper-slide slide">
                         <div class="slide__info">
                             <div class="slide__info--wrapper">
                                 <p class="slide__info--subtitle">Наше достижение</p>
@@ -275,14 +275,9 @@
                     </div>
                 </div>
                 <div class="slide__image--scroll scroll">
-                    <div class="slide__image--scroll-prev scroll-prev" data-slider-direction="prev">
-                        <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                        </svg></div>
-                    <div class="slide__image--scroll-next scroll-next" data-slider-direction="next">
-                        <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                        </svg>
+                    <div class="swiper-button-prev scroll-prev">
+                    </div>
+                    <div class="swiper-button-next scroll-next">
                     </div>
                 </div>
             </section>
@@ -322,7 +317,7 @@
                 </div>
             </section>
             <section class="categories">
-                <div class="container">
+                <div class="container cards swiper">
                     <div class="categories__head">
                         <h2 class="categories__head-title">Категории товаров</h2>
                         <a class="categories__head-links link icon-arrow button" href="#" target="_blank">
@@ -333,8 +328,8 @@
                             </svg>
                         </a>
                     </div>
-                    <div class="categories__wrapper">
-                        <div class="categories__cards" data-active-card>
+                    <div class="categories__wrapper swiper-wrapper">
+                        <div class="categories__cards swiper-slide">
                             <div class="categories__card card">
                                 <a class="card__link link" href="#">
                                     <img class="card__link-img" src="./source/img/Фото 1-100.jpg"
@@ -350,7 +345,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="categories__cards">
+                        <div class="categories__cards swiper-slide">
                             <div class="categories__card card">
                                 <a class="card__link active-card__link link" href="#">
                                     <img class="card__link-img" src="./source/img/Фото 2-100.jpg"
@@ -366,7 +361,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="categories__cards">
+                        <div class="categories__cards swiper-slide">
                             <div class="categories__card card">
                                 <a class="card__link link" href="#">
                                     <img class="card__link-img" src="./source/img/Фото 3-100.jpg"
@@ -382,7 +377,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="categories__cards">
+                        <div class="categories__cards swiper-slide">
                             <div class="categories__card card">
                                 <a class="card__link link" href="#">
                                     <img class="card__link-img" src="./source/img/Фото 4-100.jpg"
@@ -400,15 +395,9 @@
                         </div>
                     </div>
                     <div class="categories__scroll scroll">
-                        <div class="categories__scroll-prev scroll-prev" data-card-direction="prev">
-                            <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                            </svg>
+                        <div class="swiper-button-prev categories__scroll-prev scroll-prev" type="button" aria-label="Previous slide">
                         </div>
-                        <div class="categories__scroll-next scroll-next" data-card-direction="next">
-                            <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                            </svg>
+                        <div class="swiper-button-next categories__scroll-next scroll-next" type="button" aria-label="Next slide">
                         </div>
                     </div>
                 </div>
@@ -556,6 +545,7 @@
             </div>
         </footer>
     </div>
+    <script src="./source/swiper-bundle.min.js"></script>
     <script src="./source/script.js"></script>
 </body>
 

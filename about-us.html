@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
+    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
     <link rel="stylesheet" href="./source/style.css">
 </head>
 
@@ -200,7 +201,7 @@
 
             </div>
         </header>
-        <main class="main-about">
+        <main class="main">
             <h1 class="visually-hidden">Visual Gold goods</h1>
             <section class="information about-us__information">
                 <h2 class="visually-hidden">О нас</h2>
@@ -261,15 +262,11 @@
                     <div class="categories__head">
                         <h2 class="categories__head-title">Новости</h2>
                     </div>
-                    <div class="news__wrapper">
-                        <div class="news__scroll scroll-prev" data-card-direction="prev">
-                            <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor"
-                                data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                            </svg>
+                    <div class="news__wrapper swiper">
+                        <div class="swiper-button-prev news__scroll-prev scroll-prev">
                         </div>
-                        <div class="news__wrapper-cards">
-                            <div class="news__cards" data-active-card>
+                        <div class="news__wrapper-cards swiper-wrapper">
+                            <div class="news__cards swiper-slide">
                                 <div class="news__card">
                                         <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
                                         <div class="news__text">
@@ -287,9 +284,9 @@
                                         </div>
                                 </div>
                             </div>
-                            <div class="news__cards">
+                            <div class="news__cards swiper-slide">
                                 <div class="news__card">
-                                    <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                        <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
                                         <div class="news__text">
                                             <h3 class="news__title">Новый принтер</h3>
                                             <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент...</p>
@@ -305,9 +302,27 @@
                                         </div>
                                 </div>
                             </div>
-                            <div class="news__cards">
+                            <div class="news__cards swiper-slide">
                                 <div class="news__card">
-                                    <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                        <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                        <div class="news__text">
+                                            <h3 class="news__title">Новый принтер</h3>
+                                            <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент...</p>
+                                            <div class="news__text--footer">
+                                                <span class="news__text--footer-span">05.02.2023</span>
+                                                <a class="news__text--footer-link link icon-arrow button" href="#">
+                                                    <span>Подробнее</span>
+                                                    <svg aria-hidden="true" focusable="false" width="23" height="23" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="news__cards swiper-slide">
+                                <div class="news__card">
+                                        <img class="news__link-img" width="300" height="170" src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
                                         <div class="news__text">
                                             <h3 class="news__title">Новый принтер</h3>
                                             <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент...</p>
@@ -324,11 +339,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="news__scroll scroll-next" data-card-direction="next">
-                            <svg aria-hidden="true" focusable="false" width="23" height="23" fill="currentColor"
-                                data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                            </svg>
+                        <div class="swiper-button-next news__scroll-next scroll-next">
                         </div>
                     </div>
                 </div>
@@ -476,6 +487,7 @@
             </div>
         </footer>
     </div>
+    <script src="./source/swiper-bundle.min.js"></script>
     <script src="./source/script.js"></script>
 </body>
 
