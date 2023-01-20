@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,15 @@
                     <div class="supinfo-container container">
                         <p class="supinfo-text">качество, на которое можно рассчитывать</p>
                         <div class="supinfo-data">
+                            <div class="supinfo-data__text">
+                                <span class="supinfo-data__text-link">Ваш регион:</span>
+                                <form class="supinfo-data__text-form form-head" action="#" method="get">
+                                    <select class="form-head__select" aria-label="Выбор страны">
+                                        <option value="Russia">Россия</option>
+                                        <option value="Belarus">Беларусь</option>
+                                    </select>
+                                </form>
+                            </div>
                             <div class="supinfo-data__social">
                                 <a class="supinfo-data__social-tel link" href="tel:+74951338754" target="_blank">+7 495
                                     133 87
@@ -70,7 +79,7 @@
                                     <ul class="nav__list list">
                                         <li class="nav__item">
                                             <a class="nav__item-link link" href="./about-us.html">
-                                                <span class="nav__active nav__active-current-link">О компании</span>
+                                                <span class="nav__active">О компании</span>
                                             </a>
                                             <!-- <ul class="submenu__list submenu-about submenu list">
                                                 <li class="nav__item-link submenu__item">
@@ -129,7 +138,7 @@
                                 <div class="menu-link__client">
                                     <ul class="menu-link__client--list list">
                                         <li class="menu-link__client--item">
-                                            <a class="link" href="./login.html">
+                                            <a class="link" href="#">
                                                 <svg class="link__auth" aria-hidden="true" focusable="false" width="37"
                                                     height="33" data-name="Login" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 36.9 32.9">
@@ -205,160 +214,101 @@
         </header>
         <main class="main">
             <h1 class="visually-hidden">Visual Gold</h1>
-            <section class="information about-us__information">
+            <section class="information information-login">
+                <h2 class="visually-hidden">Личные данные</h2>
                 <div class="container">
-                    <div class="categories__head categories__head--goods">
-                        <ul class="breadcrumbs list">
-                            <li class="breadcrumbs-item">
-                                <a class="breadcrumbs-link link" href="./index.html">Главная</a>
-                            </li>
-                            <li class="breadcrumbs-item">
-                                <a class="breadcrumbs-link link">О нас</a>
-                            </li>
-                        </ul>
-                        <h2 class="categories__head-title categories__head-title--goods">О компании</h2>
+                    <div class="information__wrapper">
+                        <a class="information__title information__evidence link" href="">Личные данные</a>
+                        <a class="information__title information__notifications link" href="">Уведомления</a>
                     </div>
                 </div>
             </section>
-            <section class="about-us">
-                <h2 class="visually-hidden">Информация о нас</h2>
-                <div class="container">
-                    <div class="about-us__content">
-                        <p class="about-us__text">
-                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет
-                            собой интересный эксперимент проверки системы обучения кадров,
-                            соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что
-                            консультация с широким активом способствует подготовки и реализации форм развития.
-                            Товарищи! новая модель организационной деятельности играет важную роль в формировании
-                            существенных финансовых и административных условий. Разнообразный и богатый опыт
-                            начало повседневной работы по формированию позиции требуют от нас анализа соответствующий
-                            условий активизации.
-                        </p>
+            <section class="personal-area">
+                <div class="container personal-area__container">
+                    <div class="personal-area__wrapper">
+                        <h2 class="personal-area__title-name">Иван Иванов</h2>
+                        <form class="personal-area__form" action="#" method="get">
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Email</legend>
+                                <div class="personal-area__email">
+                                    <label class="visually-hidden" for="email-label">Email</label>
+                                    <input class="personal-area__input personal-area__input-email" type="text" name="email" id="email-label" value="Не указано">
+                                    <svg class="personal-area__input-svg" aria-hidden="true" focusable="false" width="33" height="34" viewBox="0 0 33 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.2 33.1H.6v-5.6L20.7 7.3l5.7 5.7L6.2 33ZM32.9 6.5 27.2.8l-3.8 4 5.6 5.6 3.9-4Z"/>
+                                    </svg>
+                                </div>
+                            </fieldset>
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Телефон</legend>
+                                <div class="personal-area__phone">
+                                    <label class="visually-hidden" for="phone-label">Phone</label>
+                                    <input class="personal-area__input personal-area__input-phone" type="text" name="Phone" id="phone-label" value="+7 (962) 258 45 63">
+                                    <svg class="personal-area__input-svg" aria-hidden="true" focusable="false" width="33" height="34" viewBox="0 0 33 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.2 33.1H.6v-5.6L20.7 7.3l5.7 5.7L6.2 33ZM32.9 6.5 27.2.8l-3.8 4 5.6 5.6 3.9-4Z"/>
+                                    </svg>
+                                </div>
+                            </fieldset>
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Пол</legend>
+                                <ul class="personal-area__list list">
+                                    <li class="personal-area__item">
+                                        <input class="visually-hidden personal-area__radio-input" type="radio" id="man"
+                                            name="type" value="Аксессуар для интерьера" checked="checked">
+                                            <label class="personal-area__radio" for="man">Муж.</label>
+                                    </li>
+                                    <li class="personal-area__item">
+                                        <input class="visually-hidden personal-area__radio-input" type="radio" id="woman" name="type"
+                                            value="Детская игрушка">
+                                        <label class="personal-area__radio" for="woman">Жен.</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </form>
                     </div>
-                </div>
-            </section>
-            <section class="benefits">
-                <div class="container">
-                    <h3 class="benefits__title">Наши преимущества</h3>
-                    <div class="benefits__wrapper">
-                        <ul class="benefits__list list">
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="175" height="142"
-                                    src="./source/svg/icon-production.svg" alt="Изображение">
-                                <p class="benefits__item-text">Собственное производство</p>
-                            </li>
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="174" height="143"
-                                    src="./source/svg/icon-years.svg" alt="Изображение">
-                                <p class="benefits__item-text">15 лет на&nbsp;рынке</p>
-                            </li>
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="141" height="134"
-                                    src="./source/svg/icon-clients.svg" alt="Изображение">
-                                <p class="benefits__item-text">База из 350&nbsp;клиентов</p>
-                            </li>
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="187" height="127"
-                                    src="./source/svg/icon-delivery.svg" alt="Изображение">
-                                <p class="benefits__item-text">Доставка по&nbsp;всей&nbsp;России</p>
-                            </li>
-                        </ul>
+                    <div class="personal-area__wrapper">
+                        <form class="personal-area__form" action="#" method="get">
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Город</legend>
+                                <div class="personal-area__city">
+                                    <label class="visually-hidden" for="city-label">City</label>
+                                    <input class="personal-area__input personal-area__input-city" type="text" name="Name" id="city-label" value="Ново...">
+                                    <svg class="personal-area__input-svg" aria-hidden="true" focusable="false" width="33" height="34" viewBox="0 0 33 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.2 33.1H.6v-5.6L20.7 7.3l5.7 5.7L6.2 33ZM32.9 6.5 27.2.8l-3.8 4 5.6 5.6 3.9-4Z"/>
+                                    </svg>
+                                </div>
+                            </fieldset>
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Пароль</legend>
+                                <div class="personal-area__password">
+                                    <label class="visually-hidden" for="password">Password</label>
+                                    <input class="personal-area__input personal-area__input-password" type="password" name="Name" id="password" required="" value="******">
+                                    <svg class="personal-area__input-svg" aria-hidden="true" focusable="false" width="33" height="34" viewBox="0 0 33 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.2 33.1H.6v-5.6L20.7 7.3l5.7 5.7L6.2 33ZM32.9 6.5 27.2.8l-3.8 4 5.6 5.6 3.9-4Z"/>
+                                    </svg>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
-                </div>
-            </section>
-            <section class="news">
-                <div class="container">
-                    <div class="news__head">
-                        <h2 class="news__head-title categories__head-title">Новости</h2>
-                    </div>
-                    <div class="news__wrapper swiper">
-
-                        <div class="news__wrapper-cards swiper-wrapper">
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-prev news__scroll-prev scroll-prev">
-                        </div>
-                        <div class="swiper-button-next news__scroll-next scroll-next">
-                        </div>
+                    <div class="personal-area__wrapper">
+                        <h2 class="personal-area__title-history">История заказов</h2>
+                        <form class="personal-area__form personal-area__form-history" action="#" method="get">
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Дата оформления</legend>
+                            </fieldset>
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Номер заказа</legend>
+                            </fieldset>
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Статус</legend>
+                            </fieldset>
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Оплата</legend>
+                            </fieldset>
+                            <fieldset class="personal-area__fieldset">
+                                <legend class="personal-area__legend">Сумма заказа</legend>
+                            </fieldset>
+                        </form>
+                        <p class="personal-area__text">В данный момент у Вас нет заказов</p>
                     </div>
                 </div>
             </section>

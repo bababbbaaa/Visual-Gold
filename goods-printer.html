@@ -139,14 +139,14 @@
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
-                                            <a class="link" href="#">
+                                            <a class="link" href="./basket.html">
                                                 <svg class="link__card" aria-hidden="true" focusable="false" width="42"
-                                                    height="33" data-name="Card" xmlns="http://www.w3.org/2000/svg"
+                                                    height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 41.9 33.5">
                                                     <path
                                                         d="M17.2 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM34 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM35.2 22.2v-2.8H19.5l-1.4-2.9h18.6L41.9 2H20v2.8h17.9l-3.2 8.9H16.8L10.5 0H0v2.8h8.7l9 19.4h17.5z" />
                                                 </svg>
-                                                <span class="visually-hidden">card</span>
+                                                <span class="visually-hidden">basket</span>
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
@@ -204,7 +204,7 @@
         </header>
         <main class="main">
             <h1 class="visually-hidden">Visual Gold goods</h1>
-            <section class="information">
+            <section class="information information-good">
                 <div class="container">
                     <div class="categories__head categories__head--goods">
                         <ul class="breadcrumbs list">
@@ -215,7 +215,7 @@
                                 <a class="breadcrumbs-link link active-breadcrumbs">Принтеры</a>
                             </li>
                         </ul>
-                        <h2 class="visually-hidden">Товар</h2>
+                        <h2 class="visually-hidden">Категории товаров</h2>
                     </div>
                 </div>
             </section>
@@ -239,19 +239,32 @@
                             <div class="goods__slider-button-next swiper-button-next"></div>
                           </div>
                         <div class="goods--printer__info">
-                            <h2 class="categories__head-title categories__head-title--goods">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</h2>
+                            <h2 class="categories__head-title categories__head-title--good">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</h2>
                             <p class="info-text__column-text">Принтер печатает на табличках и на лентах. Головка этого принтера рассчитана на печать в три раза больше ,чем у популярного Argoх CP-2140.</p>
+                            <p class="info-text__column-price">Стоимость:</p>
                             <div class="card--good-ad good-add">
-                                <form class="goods-add__form" action="#" method="get">
-                                        <label class="good-add__form-label" for="count-goods">
-                                            <span>46 700</span>
-                                            <span>р.</span>
-                                        </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
-                                        <button class="good-add__button button" type="button">В корзину</button>
+                                <form class="good-add__form" action="#" method="get">
+                                    <label class="good-add__form-label good-add__form-label__goods" for="count-goods">
+                                        <span>46 700</span>
+                                        <span>р.</span>
+                                    </label>
+                                    <div class="good-add__form-wrapper__goods">
+                                        <span class="good-add__form-count">Кол-во:</span>
+                                        <input class="good-add__form-input good-add__form-input__goods" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="goods-add__button button" type="button">В корзину</button>
                                 </form>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="characteristics">
+                <div class="container">
+                    <div class="characteristics__wrapper">
+                        <h2 class="characteristics__title">Характеристики</h2>
+                        <p class="characteristics__text">Принтер печатает на табличках и на лентах. Головка этого принтера рассчитана на печать в три раза больше ,чем у популярного Argoх CP-2140.</p>
                     </div>
                 </div>
             </section>
@@ -262,74 +275,76 @@
                     </div>
                     <div class="categories__wrapper swiper-wrapper">
                         <div class="categories__cards swiper-slide">
-                            <div class="categories__card card">
-                                <a class="card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 1-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
+                            <a class="card__link link" href="#">
+                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 1-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text">
+                                    <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
+                                    <span class="card__text-icons">
+                                        <svg aria-hidden="true" focusable="false" width="23" height="45"
                                             style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 25.6 47">
                                             <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
                                         </svg>
-                                    </div>
-                                </a>
-                            </div>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                         <div class="categories__cards swiper-slide">
-                            <div class="categories__card card">
-                                <a class="card__link active-card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 2-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
+                            <a class="card__link link" href="#">
+                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 2-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text">
+                                    <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
+                                    <span class="card__text-icons">
+                                        <svg aria-hidden="true" focusable="false" width="23" height="45"
                                             style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 25.6 47">
                                             <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
                                         </svg>
-                                    </div>
-                                </a>
-                            </div>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                         <div class="categories__cards swiper-slide">
-                            <div class="categories__card card">
-                                <a class="card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 3-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
+                            <a class="card__link link" href="#">
+                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 3-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text">
+                                    <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
+                                    <span class="card__text-icons">
+                                        <svg aria-hidden="true" focusable="false" width="23" height="45"
                                             style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 25.6 47">
                                             <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
                                         </svg>
-                                    </div>
-                                </a>
-                            </div>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                         <div class="categories__cards swiper-slide">
-                            <div class="categories__card card">
-                                <a class="card__link link" href="#">
-                                    <img class="card__link-img" src="./source/img/Фото 4-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
+                            <a class="card__link link" href="#">
+                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 4-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text">
+                                    <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
+                                    <span class="card__text-icons">
+                                        <svg aria-hidden="true" focusable="false" width="23" height="45"
                                             style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 25.6 47">
                                             <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
                                         </svg>
-                                    </div>
-                                </a>
-                            </div>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="categories__scroll scroll">
-                        <div class="swiper-button-prev categories__scroll-prev scroll-prev" type="button" aria-label="Previous slide">
+                        <div class="swiper-button-prev categories__scroll-prev scroll-prev" type="button"
+                            aria-label="Previous slide">
                         </div>
-                        <div class="swiper-button-next categories__scroll-next scroll-next" type="button" aria-label="Next slide">
+                        <div class="swiper-button-next categories__scroll-next scroll-next" type="button"
+                            aria-label="Next slide">
                         </div>
                     </div>
                 </div>

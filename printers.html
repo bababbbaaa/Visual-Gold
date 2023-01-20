@@ -101,7 +101,8 @@
                                                 </li>
                                                 <li class="nav__item-link submenu__item">
                                                     <a class="nav__item-link link" href="#">
-                                                        <span class="submenu__link">Товары для ритуального сектора</span>
+                                                        <span class="submenu__link">Товары для ритуального
+                                                            сектора</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav__item-link submenu__item">
@@ -138,14 +139,14 @@
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
-                                            <a class="link" href="#">
+                                            <a class="link" href="./basket.html">
                                                 <svg class="link__card" aria-hidden="true" focusable="false" width="42"
-                                                    height="33" data-name="Card" xmlns="http://www.w3.org/2000/svg"
+                                                    height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 41.9 33.5">
                                                     <path
                                                         d="M17.2 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM34 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM35.2 22.2v-2.8H19.5l-1.4-2.9h18.6L41.9 2H20v2.8h17.9l-3.2 8.9H16.8L10.5 0H0v2.8h8.7l9 19.4h17.5z" />
                                                 </svg>
-                                                <span class="visually-hidden">card</span>
+                                                <span class="visually-hidden">basket</span>
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
@@ -219,7 +220,7 @@
                 </div>
             </section>
             <section class="goods--printers">
-                <div class="container">
+                <div class="container goods-container">
                     <div class="categories__filter">
                         <div class="categories__filter--wrapper">
                             <form class="categories__filter-form form" action="#" method="get">
@@ -229,7 +230,8 @@
                                     <option value="date">дате</option>
                                 </select>
                                 <svg class="categories__filter-svg" aria-hidden="true" focusable="false" width="22"
-                                    height="12" viewBox="0 0 26 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    height="13" viewBox="0 0 26 16" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.4 1.6H.9M17.4 8H.9M25.8 14.3H1" stroke="gray" stroke-width="2.1"
                                         stroke-miterlimit="10" />
                                 </svg>
@@ -284,212 +286,181 @@
                         </div>
                     </div>
                     <div class="categories__wrapper categories__wrapper--good categories__wrapper--good-printers">
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="./goods-printer.html">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото инфо-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./goods-printer.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото инфо-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР ДЛЯ ЛЕНТ И&nbsp;ТАБЛИЧЕК
+                                        Х-2000V</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="#">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото 3-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР 2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./printers.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 3-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР 2</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="#">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР 3</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./printers.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 4-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР 3</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="#">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР 4</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./printers.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР 4</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="#">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото инфо-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./printers.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 1-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР 5</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="#">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото 3-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР 2</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./printers.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР 6</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="#">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР 3</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./printers.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 3-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР 7</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
-                        <div class="categories__cards categories__cards--good categories__cards--good-printers">
-                            <div class="categories__card card--good card">
-                                <a class="card__link card__link--good link" href="#">
-                                    <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
-                                        alt="Изображение товара">
-                                    <div class="card__text">
-                                        <h3 class="card__title">ПРИНТЕР 4</h3>
-                                        <svg aria-hidden="true" focusable="false" width="23" height="23"
-                                            style="fill:#fff" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25.6 47">
-                                            <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="categories__cards card--good card categories__cards--good-printers">
+                            <a class="card__link card__link--good link" href="./printers.html">
+                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
+                                    alt="Изображение товара">
+                                <div class="card__text card__text--good-printers">
+                                    <h3 class="card__title card__title--good-printers">ПРИНТЕР 8</h3>
+                                </div>
+                            </a>
                             <div class="card--good-add good-add">
                                 <form class="good-add__form" action="#" method="get">
+                                    <div class="good-add__form-wrapper">
                                         <label class="good-add__form-label" for="count-goods">
                                             <span>46 700</span>
                                             <span>р.</span>
                                         </label>
-                                        <input class="good-add__form-input" type="number" id="count-goods" step="1" min="1" max="100" name="quantity" value="1">
+                                        <input class="good-add__form-input" type="number" id="count-goods" step="1"
+                                            min="1" max="100" name="quantity" value="1">
+                                    </div>
+                                    <button class="good-add__button button" type="button">В корзину</button>
                                 </form>
-                                <button class="good-add__button button" type="button">В корзину</button>
                             </div>
                         </div>
                     </div>
@@ -618,7 +589,8 @@
                         </div>
                         <div class="main-footer__menu--subscription subscription-footer">
                             <h3 class="subscription-footer__title">Подписка</h3>
-                            <p class="subscription-footer__text">Лучшие условия, <br>эксключизвные <br>предложения&nbsp;и&nbsp;новости <br>в нашей рассылке</p>
+                            <p class="subscription-footer__text">Лучшие условия, <br>эксключизвные
+                                <br>предложения&nbsp;и&nbsp;новости <br>в нашей рассылке</p>
                             <form class="subscription-footer__form" action="#">
                                 <input class="subscription-footer__form-input" type="email" placeholder="E-mail"
                                     required="">
