@@ -18,25 +18,6 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-const modalButton = document.querySelectorAll(".modal-button");
-const modalClose = document.querySelector(".modal-close");
-const modalCloseBtn = document.querySelector(".modal__form__button-close");
-
-modalButton.forEach((e=>e.addEventListener("click", (e=>{
-  modalClose.classList.contains("modal-close") && (e.preventDefault(),
-  modalClose.classList.remove("modal-close"))
-}
-)))),
-modalClose.addEventListener("click", (e=>{
-  e.target == modalClose && modalClose.classList.contains("modal") && modalClose.classList.add("modal-close")
-}
-));
-modalCloseBtn.addEventListener("click", (e=>{
-  modalClose.classList.add("modal-close")
-}
-));
-
-
 const slider = new Swiper('.header-slider', {
   loop: true,
   slidesPerView: 1, // показывать по 1 изображению
@@ -165,3 +146,28 @@ galleryThumbs.controller.control = galleryTop;
 // }
 
 // window.addEventListener("resize", updateSize());
+
+const modalButton = document.querySelectorAll(".modal-button");
+const modalClose = document.querySelector(".modal-close");
+const modalCloseBtn = document.querySelector(".modal__form__button-close");
+
+modalButton.forEach((e=>e.addEventListener("click", (e=>{
+  modalClose.classList.contains("modal-close") && (e.preventDefault(),
+  modalClose.classList.remove("modal-close"))
+}
+)))),
+
+modalCloseBtn.addEventListener("click", function() {
+  modalClose.classList.add("modal-close")
+}
+);
+
+modalButton.forEach((e=>e.addEventListener("click", (e=>{
+  modalClose.classList.contains("modal-close") && (e.preventDefault(),
+  modalClose.classList.remove("modal-close"))
+}
+)))),
+modalClose.addEventListener("click", (e=>{
+  e.target == modalClose && modalClose.classList.contains("modal") && modalClose.classList.add("modal-close")
+}
+));
