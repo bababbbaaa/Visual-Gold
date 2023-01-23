@@ -554,36 +554,72 @@
                 <button class="modal__form__button-close button" type="submit">
                     <span class="visually-hidden">Закрыть модальное окно</span>
                 </button>
-                <div class="modal__wrapper">
-                    <div class="modal__head">
-                        <a class="modal__title link" href="#">ВХОД</a>
-                        <a class="modal__title modal__title-notactive link" href="#">РЕГИСТРАЦИЯ</a>
-                    </div>
-                    <form class="modal__form" action="№" method="get">
+                <form class="modal__form" action="#" method="get">
+                    <input class="modal__head-input modal__head-input__login" type="radio" name="tab-btn" id="login"
+                        value="ВХОД" checked>
+                    <label class="modal__title modal__head-login" for="login">ВХОД</label>
+                    <input class="modal__head-input modal__head-input__register" type="radio" name="tab-btn"
+                        id="register" value="РЕГИСТРАЦИЯ">
+                    <label class="modal__title modal__head-register" for="register">РЕГИСТРАЦИЯ</label>
+                    <div class="modal__form-wrapper modal__form__login" id="content-1">
                         <fieldset class="modal__form__fieldset">
                             <legend class="modal__form__legend">Имя пользователя или Email *</legend>
                             <div class="modal__form__email">
                                 <label class="visually-hidden" for="email-label">Имя пользователя или Email *</label>
-                                <input class="modal__form__input modal__form-email" type="text" name="email" id="email-label" value="111@gmail.com">
+                                <input class="modal__form__input modal__form-email" type="text" name="email"
+                                    id="email-label" value="111@gmail.com">
                             </div>
                         </fieldset>
                         <fieldset class="modal__form__fieldset">
                             <legend class="modal__form__legend">Пароль</legend>
                             <div class="modal__form__password">
                                 <label class="visually-hidden" for="password-label">Пароль</label>
-                                <input class="modal__form__input modal__form__input-password" type="password" name="email" id="email-label" value="1234567">
+                                <input class="modal__form__input modal__form__input-password" type="password"
+                                    name="email" id="email-label" value="1234567">
                             </div>
                         </fieldset>
                         <fieldset class="modal__form__fieldset modal__form__fieldset-login">
                             <legend class="visually-hidden">Вход в аккаунт</legend>
                             <button class="modal__form__button button" type="submit">Войти</button>
                             <label class="control">
-                                <input class="visually-hidden modal__form__input-checkbox" type="checkbox" name="color" value="Запомнить меня" checked="">
+                                <input class="visually-hidden modal__form__input-checkbox" type="checkbox" name="color"
+                                    value="Запомнить меня" checked="">
                                 <span class="modal__form-checkbox">Запомнить меня</span>
                             </label>
                         </fieldset>
-                    </form>
-                </div>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-link">
+                            <legend class="visually-hidden">Восстановление пароля</legend>
+                            <a class="modal__form-link link" href="#">Забыли пароль?</a>
+                        </fieldset>
+                    </div>
+                    <div class="modal__form-wrapper modal__form__register" id="content-2">
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Имя пользователя или Email *</legend>
+                            <div class="modal__form__email">
+                                <label class="visually-hidden" for="email-label">Имя пользователя или Email *</label>
+                                <input class="modal__form__input modal__form-email" type="text" name="email"
+                                    id="email-label" value="111@gmail.com">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Пароль</legend>
+                            <div class="modal__form__password">
+                                <label class="visually-hidden" for="password-label">Пароль</label>
+                                <input class="modal__form__input modal__form__input-password" type="password"
+                                    name="email" id="email-label" value="1234567">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-login">
+                            <legend class="visually-hidden">Зарегистрироваться</legend>
+                            <button class="modal__form__button button" type="submit">Зарегистрироваться</button>
+                            <label class="control">
+                                <input class="visually-hidden modal__form__input-checkbox" type="checkbox" name="color"
+                                    value="Запомнить меня" checked="">
+                                <span class="modal__form-checkbox">Запомнить меня</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                </form>
             </section>
         </div>
     </div>

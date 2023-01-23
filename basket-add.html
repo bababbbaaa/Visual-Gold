@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,15 @@
                     <div class="supinfo-container container">
                         <p class="supinfo-text">качество, на которое можно рассчитывать</p>
                         <div class="supinfo-data">
+                            <div class="supinfo-data__text">
+                                <span class="supinfo-data__text-link">Ваш регион:</span>
+                                <form class="supinfo-data__text-form form-head" action="#" method="get">
+                                    <select class="form-head__select" aria-label="Выбор страны">
+                                        <option value="Russia">Россия</option>
+                                        <option value="Belarus">Беларусь</option>
+                                    </select>
+                                </form>
+                            </div>
                             <div class="supinfo-data__social">
                                 <a class="supinfo-data__social-tel link" href="tel:+74951338754" target="_blank">+7 495
                                     133 87
@@ -70,7 +79,7 @@
                                     <ul class="nav__list list">
                                         <li class="nav__item">
                                             <a class="nav__item-link link" href="./about-us.html">
-                                                <span class="nav__active nav__active-current-link">О компании</span>
+                                                <span class="nav__active">О компании</span>
                                             </a>
                                             <!-- <ul class="submenu__list submenu-about submenu list">
                                                 <li class="nav__item-link submenu__item">
@@ -129,7 +138,7 @@
                                 <div class="menu-link__client">
                                     <ul class="menu-link__client--list list">
                                         <li class="menu-link__client--item">
-                                            <a class="link" href="./login.html">
+                                            <a class="link" href="#">
                                                 <svg class="link__auth" aria-hidden="true" focusable="false" width="37"
                                                     height="33" data-name="Login" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 36.9 32.9">
@@ -140,14 +149,14 @@
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
-                                            <a class="link basket-add" href="./basket-add.html">
+                                            <a class="link basket-add" href="#">
                                                 <svg class="link__card" aria-hidden="true" focusable="false" width="42"
-                                                    height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg"
+                                                    height="33" data-name="Card" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 41.9 33.5">
                                                     <path
                                                         d="M17.2 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM34 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM35.2 22.2v-2.8H19.5l-1.4-2.9h18.6L41.9 2H20v2.8h17.9l-3.2 8.9H16.8L10.5 0H0v2.8h8.7l9 19.4h17.5z" />
                                                 </svg>
-                                                <span class="visually-hidden">basket</span>
+                                                <span class="visually-hidden">card</span>
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
@@ -205,161 +214,175 @@
         </header>
         <main class="main">
             <h1 class="visually-hidden">Visual Gold</h1>
-            <section class="information about-us__information">
+            <section class="information information__basket">
                 <div class="container">
-                    <div class="categories__head categories__head--goods">
-                        <ul class="breadcrumbs list">
-                            <li class="breadcrumbs-item">
-                                <a class="breadcrumbs-link link" href="./index.html">Главная</a>
-                            </li>
-                            <li class="breadcrumbs-item">
-                                <a class="breadcrumbs-link link">О нас</a>
-                            </li>
-                        </ul>
-                        <h2 class="categories__head-title categories__head-title--goods">О компании</h2>
+                    <h2 class="information__basket--head-title">Корзина</h2>
+                </div>
+            </section>
+            <section class="basket">
+                <h2 class="visually-hidden">Корзина</h2>
+                <div class="container">
+                    <div class="basket__wrapper-add">
+                        <div class="basket__header">
+                            <p class="basket__text">Товар</p>
+                            <p class="basket__text">Цена</p>
+                            <p class="basket__text">Количество</p>
+                            <p class="basket__text">Подытог</p>
+                            <p class="basket__text">Удалить</p>
+                        </div>
+                        <form class="basket__goods" action="#" method="get">
+                            <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото инфо-100.jpg" alt="Изображение товара">
+                            <p class="basket__goods-title">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</p>
+                            <p class="basket__goods-title">46 700 р.</p>
+                            <div class="basket__goods--number">
+                                <label class="visually-hidden" for="input-step">Изменить количество</label>
+                                <input class="basket__goods--number-input" type="number" id="input-step" step="1" min="1" max="100" name="quantity" value="1">
+                            </div>
+                            <p class="basket__goods-title">46 700 р.</p>
+                            <button class="basket__goods-button button" type="button">
+                                <svg width="22" height="35" aria-hidden="true" focusable="false"  viewBox="0 0 22 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7" stroke="#969797" stroke-width="2.8" stroke-miterlimit="10"/>
+                                  </svg>
+                                <span class="visually-hidden">Корзина для удаления товара</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="basket__wrapper-add">
+                        <div class="basket__header">
+                            <p class="basket__text">Товар</p>
+                            <p class="basket__text">Цена</p>
+                            <p class="basket__text">Количество</p>
+                            <p class="basket__text">Подытог</p>
+                            <p class="basket__text">Удалить</p>
+                        </div>
+                        <form class="basket__goods" action="#" method="get">
+                            <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 3-100.jpg" alt="Изображение товара">
+                            <p class="basket__goods-title">ЛЕНТА ХРОМИРОВАННАЯ</p>
+                            <p class="basket__goods-title">11 000 р.</p>
+                            <div class="basket__goods--number">
+                                <label class="visually-hidden" for="input-step">Изменить количество</label>
+                                <input class="basket__goods--number-input" type="number" id="input-step" step="1" min="1" max="100" name="quantity" value="1">
+                            </div>
+                            <p class="basket__goods-title">11 000 р.</p>
+                            <button class="basket__goods-button button" type="button">
+                                <svg width="22" height="35" aria-hidden="true" focusable="false"  viewBox="0 0 22 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7" stroke="#969797" stroke-width="2.8" stroke-miterlimit="10"/>
+                                  </svg>
+                                <span class="visually-hidden">Корзина для удаления товара</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="basket__wrapper-add">
+                        <div class="basket__header">
+                            <p class="basket__text">Товар</p>
+                            <p class="basket__text">Цена</p>
+                            <p class="basket__text">Количество</p>
+                            <p class="basket__text">Подытог</p>
+                            <p class="basket__text">Удалить</p>
+                        </div>
+                        <form class="basket__goods" action="#" method="get">
+                            <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 2-100.jpg" alt="Изображение товара">
+                            <p class="basket__goods-title">ЛЕНТА ЦВЕТНАЯ</p>
+                            <p class="basket__goods-title">1 200 р.</p>
+                            <div class="basket__goods--number">
+                                <label class="visually-hidden" for="input-step">Изменить количество</label>
+                                <input class="basket__goods--number-input" type="number" id="input-step" step="1" min="1" max="100" name="quantity" value="1">
+                            </div>
+                            <p class="basket__goods-title">1 200 р.</p>
+                            <button class="basket__goods-button button" type="button">
+                                <svg width="22" height="35" aria-hidden="true" focusable="false"  viewBox="0 0 22 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7" stroke="#969797" stroke-width="2.8" stroke-miterlimit="10"/>
+                                  </svg>
+                                <span class="visually-hidden">Корзина для удаления товара</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>
-            <section class="about-us">
-                <h2 class="visually-hidden">Информация о нас</h2>
+            <section class="order-price">
                 <div class="container">
-                    <div class="about-us__content">
-                        <p class="about-us__text">
-                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет
-                            собой интересный эксперимент проверки системы обучения кадров,
-                            соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что
-                            консультация с широким активом способствует подготовки и реализации форм развития.
-                            Товарищи! новая модель организационной деятельности играет важную роль в формировании
-                            существенных финансовых и административных условий. Разнообразный и богатый опыт
-                            начало повседневной работы по формированию позиции требуют от нас анализа соответствующий
-                            условий активизации.
-                        </p>
+                    <h2 class="order-price__title">Сумма заказов</h2>
+                    <div class="order-price__wrapper">
+                        <div class="order-price__wrapper-column">
+                            <p class="order-price__inner-text">Подытог:</p>
+                            <p class="order-price__text">58 900 р.</p>
+                        </div>
+                        <div class="order-price__wrapper-column">
+                            <p class="order-price__inner-text">Доставка:</p>
+                            <p class="order-price__text">Бесплатная лоставка</p>
+                        </div>
+                        <div class="order-price__wrapper-column">
+                            <p class="order-price__inner-text">Итого:</p>
+                            <p class="order-price__text">58 900 р.</p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="benefits">
+            <section class="order">
+                <h2 class="visually-hidden">Форма заказа</h2>
                 <div class="container">
-                    <h3 class="benefits__title">Наши преимущества</h3>
-                    <div class="benefits__wrapper">
-                        <ul class="benefits__list list">
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="175" height="142"
-                                    src="./source/svg/icon-production.svg" alt="Изображение">
-                                <p class="benefits__item-text">Собственное производство</p>
-                            </li>
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="174" height="143"
-                                    src="./source/svg/icon-years.svg" alt="Изображение">
-                                <p class="benefits__item-text">15 лет на&nbsp;рынке</p>
-                            </li>
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="141" height="134"
-                                    src="./source/svg/icon-clients.svg" alt="Изображение">
-                                <p class="benefits__item-text">База из 350&nbsp;клиентов</p>
-                            </li>
-                            <li class="benefits__item">
-                                <img class="benefits__item-img" width="187" height="127"
-                                    src="./source/svg/icon-delivery.svg" alt="Изображение">
-                                <p class="benefits__item-text">Доставка по&nbsp;всей&nbsp;России</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="news">
-                <div class="container">
-                    <div class="news__head">
-                        <h2 class="news__head-title categories__head-title">Новости</h2>
-                    </div>
-                    <div class="news__wrapper swiper">
-
-                        <div class="news__wrapper-cards swiper-wrapper">
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news__cards swiper-slide">
-                                <img class="news__link-img" width="300" height="170"
-                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
-                                <div class="news__text">
-                                    <h3 class="news__title">Новый принтер</h3>
-                                    <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
-                                        развитие структуры представляет собой интересный эксперимент...</p>
-                                    <div class="news__text--footer">
-                                        <span class="news__text--footer-span">05.02.2023</span>
-                                        <a class="news__text--footer-link link icon-arrow button" href="#">
-                                            <span>Подробнее</span>
-                                            <svg aria-hidden="true" focusable="false" width="23" height="32"
-                                                data-name="arrow" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 25.6 47">
-                                                <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-prev news__scroll-prev scroll-prev">
-                        </div>
-                        <div class="swiper-button-next news__scroll-next scroll-next">
-                        </div>
-                    </div>
+                    <form class="order__form"  action="#" method="get">
+                        <fieldset class="order__form-fieldset">
+                            <legend class="order__form-legend">1. Данные покупателя</legend>
+                            <ul class="order__form-list list">
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-surname">Фамилия<span>*</span></label>
+                                    <input class="order__form-list__input" type="text" name="Фамилия" id="field-surname" required="" placeholder="Иванов"> 
+                                </li>
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-name">Имя<span>*</span></label>
+                                    <input class="order__form-list__input" type="text" name="Имя" id="field-name" required="" placeholder="Иван"> 
+                                </li>
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-phone">Телефон<span>*</span></label>
+                                    <input class="order__form-list__input" type="tel" name="Tel" id="field-phone" required="" placeholder="+7 952 456 85 75"> 
+                                </li>
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-email">Электронная почта<span>*</span></label>
+                                    <input class="order__form-list__input" type="text" name="Tel" id="field-email" required="" placeholder="ivanivanov@gmail.com"> 
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="order__form-fieldset">
+                            <legend class="order__form-legend">2. Способ и адрес доставки</legend>
+                            <ul class="order__form-list list">
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-country">Ваша страна<span>*</span></label>
+                                    <select class="order__form-list__select" id="field-country" aria-label="Сортировка">
+                                        <option value="Russia">Россия</option>
+                                        <option value="Belarus">Беларусь</option>
+                                      </select>
+                                </li>
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-city">Город<span>*</span></label>
+                                    <input class="order__form-list__input" type="text" name="Имя" id="field-citye" required="" placeholder="Новосибирск"> 
+                                </li>
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-textarea">Адрес</label>
+                                    <textarea class="order__form-list__textarea" id="field-textarea" rows="4" cols="30" placeholder="Номер дома и название улицы"></textarea>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="order__form-fieldset">
+                            <legend class="order__form-legend">3. Оплата</legend>
+                            <ul class="order__form-list list">
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-pay">Способ оплаты <span>*</span></label>
+                                    <select class="order__form-list__select" id="field-pay" aria-label="Сортировка">
+                                        <option value="cash">Оплата наличными</option>
+                                        <option value="online">Безналичная оплата</option>
+                                        <option value="delivery">Оплата при доставке</option>
+                                      </select>
+                                </li>
+                                <li class="order__form-list__item">
+                                    <label class="order__form-list__label" for="field-text">Комментарий к заказу</label>
+                                    <textarea class="order__form-list__textarea" id="field-text" rows="4" cols="30" placeholder="">
+                                    </textarea>
+                                </li>
+                            </ul>
+                            <button class="order__form-button button">Оформить заказ</button>
+                        </fieldset>
+                    </form>
                 </div>
             </section>
         </main>
