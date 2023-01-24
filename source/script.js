@@ -18,11 +18,12 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+//Слайдер главного экрана
 const slider = new Swiper('.header-slider', {
   loop: true,
-  slidesPerView: 1, // показывать по 1 изображению
-	spaceBetween: 1000, // расстояние между слайдами
-	navigation: { // задаем кнопки навигации
+  slidesPerView: 1,
+	spaceBetween: 1000,
+	navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
@@ -38,10 +39,11 @@ const slider = new Swiper('.header-slider', {
   grabCursor: true, // менять иконку курсора
 });
 
-const news = new Swiper('.news__wrapper', {
+//Слайдер каталога
+const news = new Swiper('.news__wrapper .swiper-container', {
   loop: true,
   slidesPerView: 3,
-  spaceBetween: 40,
+  spaceBetween: 30,
 	navigation: { 
     nextEl: '.news__scroll-next',
     prevEl: '.news__scroll-prev',
@@ -49,62 +51,31 @@ const news = new Swiper('.news__wrapper', {
   grabCursor: true,
 });
 
-const goods = new Swiper('.goods__slider', {
-  loop: true,
-  slidesPerView: 1,
-	navigation: { 
-    nextEl: '.goods__slider-button-next',
-    prevEl: '.goods__slider-button-prev',
-  },
-  grabCursor: true,
+//Слайдер товара, инициализация превью слайдера
+const goodsSliderThumbs = new Swiper('.goods__slider--thumbs .swiper-container', { // ищем слайдер превью по селектору
+	loop: true,
+	slidesPerView: 3,
+	spaceBetween: 24,
+	navigation: {
+		nextEl: '.goods__slider-button-next',
+		prevEl: '.goods__slider-button-prev',
+	},
+	freeMode: true, // при перетаскивании превью ведет себя как при скролле	
 });
 
-var galleryTop = new Swiper('.gallery-top', {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  loop: true,
-  loopedSlides: 4
+const goodsSlider = new Swiper('.goods__slider--images .swiper-container', { // ищем слайдер превью по селектору
+	loop: true,
+	slidesPerView: 1,
+	mousewheel: true,
+	navigation: {
+		nextEl: '.goods__slider-button-next',
+		prevEl: '.goods__slider-button-prev',
+	},
+	grabCursor: true,
+	thumbs: { // указываем на превью слайдер
+		swiper: goodsSliderThumbs,
+	},
 });
-var galleryThumbs = new Swiper('.gallery-thumbs', {
-  spaceBetween: 10,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  touchRatio: 0.2,
-  slideToClickedSlide: true,
-  loop: true,
-  loopedSlides: 4
-  
-});
-galleryTop.controller.control = galleryThumbs;
-galleryThumbs.controller.control = galleryTop;
-
-// const cards = new Swiper('.cards', {
-//   loop: true,
-//   slidesPerView: 1,
-//   navigation: {
-//    	nextEl: '.categories__scroll-next',
-//     prevEl: '.categories__scroll-prev',
-//   },
-//   effect: "fade",
-//     fadeEffect: {
-//     crossFade: true,
-//   },
-//   grabCursor: true, // менять иконку курсора
-//   parallax:true,
-//   breakpoints: {
-//     // when window width is >= 1080px
-//     1080: {
-//       init: false,
-//       slidesPerView: 4,
-//       mousewheel: true, // можно прокручивать изображения курсором
-//     },
-//   }
-// });
-
-
 
 // const smallWindow = 1080;
 // let cardsWindow = null;
@@ -159,15 +130,15 @@ modalButton.forEach((e=>e.addEventListener("click", (e=>{
 
 modalCloseBtn.addEventListener("click", function() {
   modalClose.classList.add("modal-close")
-}
-);
+});
 
-modalButton.forEach((e=>e.addEventListener("click", (e=>{
-  modalClose.classList.contains("modal-close") && (e.preventDefault(),
-  modalClose.classList.remove("modal-close"))
-}
-)))),
 modalClose.addEventListener("click", (e=>{
   e.target == modalClose && modalClose.classList.contains("modal") && modalClose.classList.add("modal-close")
 }
 ));
+
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode === 27) {
+    modalClose.classList.add('modal-close');
+  }
+});
