@@ -1,3 +1,62 @@
+$(document).ready(function() {
+  $('.form-head__select').each(function() {
+    let $this = $(this),
+      selectOption = $this.find('option'),
+      selectOptionLength = selectOption.length,
+      selectedOption = selectOption.filter(':selected'),
+      dur = 300;
+  
+    $this.hide();
+    $this.wrap('<div class="select"></div>');
+    $('<div>', {
+      class: 'form-head__select--inner',
+      text: 'Россия'
+    }).insertAfter($this);
+  
+    let selectGap = $this.next('.form-head__select--inner'),
+      caret = selectGap.find('.caret');
+    $('<ul>', {
+      class: 'form-head__select--list'
+    }).insertAfter(selectGap);
+  
+    let selectList = selectGap.next('.form-head__select--list');
+    // Add li - option items
+    for (let i = 0; i < selectOptionLength; i++) {
+      $('<li>', {
+          class: 'form-head__select--item',
+          html: $('<span>', {
+            text: selectOption.eq(i).text()
+          })
+        })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList);
+    }
+    let selectItem = selectList.find('li');
+  
+    selectList.slideUp(0);
+    selectGap.on('click', function() {
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        selectList.slideDown(dur);
+  
+        selectItem.on('click', function() {
+          let chooseItem = $(this).data('value');
+  
+          $('select').val(chooseItem).attr('selected', 'selected');
+          selectGap.text($(this).find('span').text());
+  
+          selectList.slideUp(dur);
+          selectGap.removeClass('on');
+        });
+  
+      } else {
+        $(this).removeClass('on');
+        selectList.slideUp(dur);
+      }
+    });
+  });
+});
+
 const buttonMenu = document.querySelector(".menu-link__client-button");
 const menuClose = document.querySelector(".menu-link__close");
 buttonMenu.addEventListener("click", (function() {
@@ -40,6 +99,29 @@ const slider = new Swiper('.header-slider', {
 });
 
 //Слайдер каталога
+const categoriesSlide = new Swiper('.categories__wrapper .swiper-container', {
+	loop: true,
+  navigation: {
+    nextEl: '.categories__scroll-next',
+    prevEl: '.categories__scroll-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      grabCursor: true,
+      centeredSlides: true,
+    },
+    // when window width is >= 1081px
+    1081: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      grabCursor: false,
+    },
+  },
+});
+
+//Слайдер новостей
 const news = new Swiper('.news__wrapper .swiper-container', {
   loop: true,
   slidesPerView: 3,
@@ -76,47 +158,6 @@ const goodsSlider = new Swiper('.goods__slider--images .swiper-container', { // 
 		swiper: goodsSliderThumbs,
 	},
 });
-
-// const smallWindow = 1080;
-// let cardsWindow = null;
-// let widthWindow;
-
-// function initSwiper () {
-//   if (!cardsWindow) {
-//     cardsWindow = new Swiper('.cards', {
-//       loop: true,
-//       slidesPerView: 1,
-//       navigation: {
-//       	nextEl: '.categories__scroll-next',
-//         prevEl: '.categories__scroll-prev',
-//       },
-//       effect: "fade",
-//       fadeEffect: {
-//         crossFade: true,
-//       },
-//       // mousewheel: true, // можно прокручивать изображения курсором
-//       grabCursor: true, // менять иконку курсора
-//       parallax:true,
-//     });
-//   }
-// };
-
-// function destroySwiper () {
-//   if (cardsWindow) {
-//     cardsWindow.destroy();
-//     cardsWindow = null;
-//   }
-// }
-
-// function updateSize() {
-//   if (window.innerWidth <= smallWindow) {
-//     initSwiper()
-//   } else {
-//     destroySwiper()
-//   }
-// }
-
-// window.addEventListener("resize", updateSize());
 
 const modalButton = document.querySelectorAll(".modal-button");
 const modalClose = document.querySelector(".modal-close");
