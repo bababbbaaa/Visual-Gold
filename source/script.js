@@ -24,7 +24,7 @@ const slider = new Swiper('.header-slider', {
   slidesPerView: 1,
 	spaceBetween: 30,
   autoplay: {
-    delay: 10000,
+    // delay: 10000,
   },
 	navigation: {
     nextEl: '.swiper-button-next',

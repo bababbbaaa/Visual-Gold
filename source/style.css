@@ -707,9 +707,9 @@
 	margin-top: -7px;
     background: url("./svg/icon-arrow-white.svg") no-repeat right;
 
-	-webkit-transition: all .27s ease-in-out;
-	     -o-transition: all .27s ease-in-out;
-	        transition: all .27s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	     -o-transition: all .4s ease-in-out;
+	        transition: all .4s ease-in-out;
 
 	-webkit-transform: rotate(0deg);
 	    -ms-transform: rotate(0deg);
@@ -969,7 +969,6 @@
 
 .slide__info {
     display: flex;
-    align-items: flex-end;
     width: 47.3vw;
     margin: auto;
 }
@@ -1027,6 +1026,7 @@
     display: flex;
     gap: 1rem;
     align-items: baseline;
+    height: 60px;
     font-size: 1.55rem;
     color:white;
 }
