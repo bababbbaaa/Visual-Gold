@@ -22,7 +22,10 @@ window.onscroll = function() {
 const slider = new Swiper('.header-slider', {
   loop: true,
   slidesPerView: 1,
-	spaceBetween: 1000,
+	spaceBetween: 30,
+  autoplay: {
+    delay: 10000,
+  },
 	navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -57,7 +60,6 @@ const categoriesSlide = new Swiper('.categories__wrapper .swiper-container', {
     1081: {
       slidesPerView: 4,
       spaceBetween: 20,
-      grabCursor: false,
     },
   },
 });
@@ -79,6 +81,7 @@ const goodsSliderThumbs = new Swiper('.goods__slider--thumbs .swiper-container',
 	loop: true,
 	slidesPerView: 3,
 	spaceBetween: 24,
+  slideThumbActiveClass: 'swiper-slide-thumb-active',
 	navigation: {
 		nextEl: '.goods__slider-button-next',
 		prevEl: '.goods__slider-button-prev',
@@ -137,11 +140,11 @@ $(document).ready(function() {
     $this.wrap('<div class="select"></div>');
     $('<div>', {
       class: 'form-head__select--inner',
-      text: 'Россия'
+      // text: 'Россия'
+      text: $this.children('option:disabled').text(),
     }).insertAfter($this);
   
-    let selectGap = $this.next('.form-head__select--inner'),
-      caret = selectGap.find('.caret');
+    let selectGap = $this.next('.form-head__select--inner');
     $('<ul>', {
       class: 'form-head__select--list'
     }).insertAfter(selectGap);
@@ -176,10 +179,15 @@ $(document).ready(function() {
           selectGap.removeClass('on');
         });
   
-      } else {
+      }
+      else {
         $(this).removeClass('on');
         selectList.slideUp(dur);
       }
+    });
+    $( window ).scroll(function() {
+      $( ".form-head__select--list" ).css( "display", "none" );
+      selectGap.removeClass('on');
     });
   });
 });

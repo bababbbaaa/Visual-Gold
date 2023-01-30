@@ -274,10 +274,10 @@
                             <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото инфо-100.jpg"
                                 alt="Изображение товара">
                             <p class="basket__goods-title">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</p>
-                            <p class="basket__goods-title">46 700 р.</p>
+                            <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
                             <div class="basket__goods--number">
                                 <label class="visually-hidden" for="input-step">Изменить количество</label>
-                                <input class="basket__goods--number-input" type="number" id="input-step" step="1"
+                                <input class="basket__goods--number-input" type="number" step="1"
                                     min="1" max="100" name="quantity" value="1">
                                 <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
                                     <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
@@ -293,7 +293,7 @@
                                     </svg>
                                 </span>
                             </div>
-                            <p class="basket__goods-title">46 700 р.</p>
+                            <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
                             <button class="basket__goods-button button" type="button">
                                 <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -316,10 +316,10 @@
                             <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 3-100.jpg"
                                 alt="Изображение товара">
                             <p class="basket__goods-title">ЛЕНТА ХРОМИРОВАННАЯ</p>
-                            <p class="basket__goods-title">11 000 р.</p>
+                            <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
                             <div class="basket__goods--number">
                                 <label class="visually-hidden" for="input-step">Изменить количество</label>
-                                <input class="basket__goods--number-input" type="number" id="input-step" step="1"
+                                <input class="basket__goods--number-input" type="number" step="1"
                                     min="1" max="100" name="quantity" value="1">
                                 <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
                                     <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
@@ -335,7 +335,7 @@
                                     </svg>
                                 </span>
                             </div>
-                            <p class="basket__goods-title">11 000 р.</p>
+                            <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
                             <button class="basket__goods-button button" type="button">
                                 <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -358,10 +358,10 @@
                             <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 2-100.jpg"
                                 alt="Изображение товара">
                             <p class="basket__goods-title">ЛЕНТА ЦВЕТНАЯ</p>
-                            <p class="basket__goods-title">1 200 р.</p>
+                            <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
                             <div class="basket__goods--number">
                                 <label class="visually-hidden" for="input-step">Изменить количество</label>
-                                <input class="basket__goods--number-input" type="number" id="input-step" step="1"
+                                <input class="basket__goods--number-input" type="number" step="1"
                                     min="1" max="100" name="quantity" value="1">
                                 <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
                                     <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
@@ -377,7 +377,7 @@
                                     </svg>
                                 </span>
                             </div>
-                            <p class="basket__goods-title">1 200 р.</p>
+                            <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
                             <button class="basket__goods-button button" type="button">
                                 <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -447,8 +447,8 @@
                                 <li class="order__form-list__item">
                                     <label class="order__form-list__label" for="field-country">Ваша
                                         страна<span>*</span></label>
-                                    <select class="order__form-list__select" id="field-country" aria-label="Сортировка">
-                                        <option value="Russia">Россия</option>
+                                    <select class="order__form-list__select form-head__select" id="field-country" aria-label="Сортировка">
+                                        <option disabled value="Russia">Россия</option>
                                         <option value="Belarus">Беларусь</option>
                                     </select>
                                 </li>
@@ -470,8 +470,8 @@
                                 <li class="order__form-list__item">
                                     <label class="order__form-list__label" for="field-pay">Способ оплаты
                                         <span>*</span></label>
-                                    <select class="order__form-list__select" id="field-pay" aria-label="Сортировка">
-                                        <option value="cash">Оплата наличными</option>
+                                    <select class="order__form-list__select form-head__select" id="field-pay" aria-label="Сортировка">
+                                        <option disabled value="cash">Оплата наличными</option>
                                         <option value="online">Безналичная оплата</option>
                                         <option value="delivery">Оплата при доставке</option>
                                     </select>
@@ -639,8 +639,82 @@
                 </div>
             </div>
         </footer>
+        <div class="modal modal-close">
+            <section class="modal__container">
+                <button class="modal__form__button-close button" type="submit">
+                    <span class="visually-hidden">Закрыть модальное окно</span>
+                </button>
+                <form class="modal__form" action="#" method="get">
+                    <input class="modal__head-input modal__head-input__login" type="radio" name="tab-btn" id="login"
+                        value="ВХОД" checked>
+                    <label class="modal__title modal__head-login" for="login">ВХОД</label>
+                    <input class="modal__head-input modal__head-input__register" type="radio" name="tab-btn"
+                        id="register" value="РЕГИСТРАЦИЯ">
+                    <label class="modal__title modal__head-register" for="register">РЕГИСТРАЦИЯ</label>
+                    <div class="modal__form-wrapper modal__form__login" id="content-1">
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Имя пользователя или Email *</legend>
+                            <div class="modal__form__email">
+                                <label class="visually-hidden" for="emails-label">Имя пользователя или Email *</label>
+                                <input class="modal__form__input modal__form-email" type="text" name="email"
+                                    id="emails-label" value="11@gmail.com">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Пароль</legend>
+                            <div class="modal__form__password">
+                                <label class="visually-hidden" for="password-label">Пароль</label>
+                                <input class="modal__form__input modal__form__input-password" type="password"
+                                    name="email" id="passord-label" value="1234567">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-login">
+                            <legend class="visually-hidden">Вход в аккаунт</legend>
+                            <button class="modal__form__button button" type="submit">Войти</button>
+                            <label class="control">
+                                <input class="visually-hidden modal__form__input-checkbox" type="checkbox" name="color"
+                                    value="Запомнить меня">
+                                <span class="modal__form-checkbox">Запомнить меня</span>
+                            </label>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-link">
+                            <legend class="visually-hidden">Восстановление пароля</legend>
+                            <a class="modal__form-link link" href="#">Забыли пароль?</a>
+                        </fieldset>
+                    </div>
+                    <div class="modal__form-wrapper modal__form__register" id="content-2">
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Имя пользователя или Email *</legend>
+                            <div class="modal__form__email">
+                                <label class="visually-hidden" for="email-label">Имя пользователя или Email *</label>
+                                <input class="modal__form__input modal__form-email" type="text" name="email"
+                                    id="email-label" value="111@gmail.com">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Пароль</legend>
+                            <div class="modal__form__password">
+                                <label class="visually-hidden" for="password-label">Пароль</label>
+                                <input class="modal__form__input modal__form__input-password" type="password"
+                                    name="email" id="password-label" value="1234567">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-login">
+                            <legend class="visually-hidden">Зарегистрироваться</legend>
+                            <button class="modal__form__button button" type="submit">Зарегистрироваться</button>
+                            <label class="control">
+                                <input class="visually-hidden modal__form__input-checkbox" type="checkbox" name="color"
+                                    value="Запомнить меня">
+                                <span class="modal__form-checkbox">Запомнить меня</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+        </div>
     </div>
     <script src="./source/swiper-bundle.min.js"></script>
+    <script src="./source/jquery-3.6.3.min.js"></script>
     <script src="./source/script.js"></script>
 </body>
 

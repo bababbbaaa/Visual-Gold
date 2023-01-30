@@ -65,7 +65,7 @@
                                         </li>
                                         <li class="nav__item">
                                             <a class="nav__item-link link" href="./goods.html">
-                                                <span class="nav__active">Товары</span>
+                                                <span class="nav__active nav__active-current-link">Товары</span>
                                             </a>
                                             <ul class="submenu__list submenu-goods submenu list">
                                                 <li class="nav__item-link submenu__item">
@@ -123,12 +123,9 @@
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
-                                            <a class="link" href="./basket.html">
-                                                <svg class="link__card" aria-hidden="true" focusable="false" width="42"
-                                                    height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 41.9 33.5">
-                                                    <path
-                                                        d="M17.2 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM34 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM35.2 22.2v-2.8H19.5l-1.4-2.9h18.6L41.9 2H20v2.8h17.9l-3.2 8.9H16.8L10.5 0H0v2.8h8.7l9 19.4h17.5z" />
+                                            <a class="link basket-add" href="./basket-add.html">
+                                                <svg class="link__card" aria-hidden="true" focusable="false" width="42" height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.9 33.5">
+                                                    <path d="M17.2 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM34 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM35.2 22.2v-2.8H19.5l-1.4-2.9h18.6L41.9 2H20v2.8h17.9l-3.2 8.9H16.8L10.5 0H0v2.8h8.7l9 19.4h17.5z"></path>
                                                 </svg>
                                                 <span class="visually-hidden">basket</span>
                                             </a>
@@ -264,7 +261,7 @@
                                 <a class="breadcrumbs-link link" href="./index.html">Главная</a>
                             </li>
                             <li class="breadcrumbs-item">
-                                <a class="breadcrumbs-link link active-breadcrumbs">Товары</a>
+                                <a class="breadcrumbs-link link active-breadcrumbs" href="./goods.html">Товары</a>
                             </li>
                         </ul>
                         <h2 class="visually-hidden">Категории товаров</h2>
@@ -500,7 +497,82 @@
                 </div>
             </div>
         </footer>
+        <div class="modal modal-close">
+            <section class="modal__container">
+                <button class="modal__form__button-close button" type="submit">
+                    <span class="visually-hidden">Закрыть модальное окно</span>
+                </button>
+                <form class="modal__form" action="#" method="get">
+                    <input class="modal__head-input modal__head-input__login" type="radio" name="tab-btn" id="login"
+                        value="ВХОД" checked>
+                    <label class="modal__title modal__head-login" for="login">ВХОД</label>
+                    <input class="modal__head-input modal__head-input__register" type="radio" name="tab-btn"
+                        id="register" value="РЕГИСТРАЦИЯ">
+                    <label class="modal__title modal__head-register" for="register">РЕГИСТРАЦИЯ</label>
+                    <div class="modal__form-wrapper modal__form__login" id="content-1">
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Имя пользователя или Email *</legend>
+                            <div class="modal__form__email">
+                                <label class="visually-hidden" for="emails-label">Имя пользователя или Email *</label>
+                                <input class="modal__form__input modal__form-email" type="text" name="email"
+                                    id="emails-label" value="11@gmail.com">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Пароль</legend>
+                            <div class="modal__form__password">
+                                <label class="visually-hidden" for="password-label">Пароль</label>
+                                <input class="modal__form__input modal__form__input-password" type="password"
+                                    name="email" id="passord-label" value="1234567">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-login">
+                            <legend class="visually-hidden">Вход в аккаунт</legend>
+                            <button class="modal__form__button button" type="submit">Войти</button>
+                            <label class="control">
+                                <input class="visually-hidden modal__form__input-checkbox" type="checkbox" name="color"
+                                    value="Запомнить меня">
+                                <span class="modal__form-checkbox">Запомнить меня</span>
+                            </label>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-link">
+                            <legend class="visually-hidden">Восстановление пароля</legend>
+                            <a class="modal__form-link link" href="#">Забыли пароль?</a>
+                        </fieldset>
+                    </div>
+                    <div class="modal__form-wrapper modal__form__register" id="content-2">
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Имя пользователя или Email *</legend>
+                            <div class="modal__form__email">
+                                <label class="visually-hidden" for="email-label">Имя пользователя или Email *</label>
+                                <input class="modal__form__input modal__form-email" type="text" name="email"
+                                    id="email-label" value="111@gmail.com">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset">
+                            <legend class="modal__form__legend">Пароль</legend>
+                            <div class="modal__form__password">
+                                <label class="visually-hidden" for="password-label">Пароль</label>
+                                <input class="modal__form__input modal__form__input-password" type="password"
+                                    name="email" id="password-label" value="1234567">
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__form__fieldset modal__form__fieldset-login">
+                            <legend class="visually-hidden">Зарегистрироваться</legend>
+                            <button class="modal__form__button button" type="submit">Зарегистрироваться</button>
+                            <label class="control">
+                                <input class="visually-hidden modal__form__input-checkbox" type="checkbox" name="color"
+                                    value="Запомнить меня">
+                                <span class="modal__form-checkbox">Запомнить меня</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+        </div>
     </div>
+    <script src="./source/swiper-bundle.min.js"></script>    
+    <script src="./source/jquery-3.6.3.min.js"></script>
     <script src="./source/script.js"></script>
 </body>
 
