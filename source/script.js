@@ -22,9 +22,9 @@ window.onscroll = function() {
 const slider = new Swiper('.header-slider', {
   loop: true,
   slidesPerView: 1,
-	spaceBetween: 30,
+	spaceBetween: '10%',
   autoplay: {
-    // delay: 10000,
+    delay: 10000,
   },
 	navigation: {
     nextEl: '.swiper-button-next',
@@ -52,14 +52,16 @@ const categoriesSlide = new Swiper('.categories__wrapper .swiper-container', {
   breakpoints: {
     0: {
       slidesPerView: 1,
-      spaceBetween: 40,
+      // spaceBetween: 40,
+      spaceBetween: '3%',
       grabCursor: true,
       centeredSlides: true,
     },
     // when window width is >= 1081px
     1081: {
       slidesPerView: 4,
-      spaceBetween: 20,
+      // spaceBetween: 20,
+      spaceBetween: '1.5%',
     },
   },
 });
@@ -67,20 +69,33 @@ const categoriesSlide = new Swiper('.categories__wrapper .swiper-container', {
 //Слайдер новостей
 const news = new Swiper('.news__wrapper .swiper-container', {
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 30,
 	navigation: { 
     nextEl: '.news__scroll-next',
     prevEl: '.news__scroll-prev',
   },
   grabCursor: true,
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      // spaceBetween: 40,
+      spaceBetween: '5%',
+    },
+    // when window width is >= 1081px
+    1081: {
+      slidesPerView: 3,
+      // spaceBetween: 20,
+      spaceBetween: '3%',
+    },
+  },
 });
 
 //Слайдер товара, инициализация превью слайдера
 const goodsSliderThumbs = new Swiper('.goods__slider--thumbs .swiper-container', { // ищем слайдер превью по селектору
 	loop: true,
 	slidesPerView: 3,
-	spaceBetween: 24,
+	// spaceBetween: 24,
+	spaceBetween: '6%',
   slideThumbActiveClass: 'swiper-slide-thumb-active',
 	navigation: {
 		nextEl: '.goods__slider-button-next',
@@ -92,6 +107,7 @@ const goodsSliderThumbs = new Swiper('.goods__slider--thumbs .swiper-container',
 const goodsSlider = new Swiper('.goods__slider--images .swiper-container', { // ищем слайдер превью по селектору
 	loop: true,
 	slidesPerView: 1,
+  spaceBetween: '6%',
 	mousewheel: true,
 	navigation: {
 		nextEl: '.goods__slider-button-next',
