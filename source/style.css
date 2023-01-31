@@ -2430,8 +2430,8 @@
     .breadcrumbs-item::after {
         top: 0.3vh;
         left: 17.5vw;
-        width: 33px;
-        height: 38px;
+        width: 14vw;
+        height: 4vw;
     }
 
     .main-header {
@@ -2927,7 +2927,7 @@
         margin-bottom: 5vw;
         padding-top: 4.5vw;
         padding-bottom: 5vw;
-        background-size: auto;
+        background-size: 190vw;
         background-position: right 12vw;
     }
 
