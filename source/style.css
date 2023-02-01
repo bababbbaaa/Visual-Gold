@@ -288,7 +288,7 @@
 .categories__filter .form-head__select--inner::after {
     width: 25px;
     height: 40px;
-    top: 3%;
+    top: -18%;
     right: -5%;
     background-position: center;
     transform: translate(5%,3%);
@@ -869,10 +869,10 @@
     height: 2vw;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     font-weight: 700;
     font-size: 1.6vw;
-    line-height: 22px;
+    line-height: 1vw;
     color: #FFFFFF;
     background-color: #B5292C;
     border-radius: 50%;
