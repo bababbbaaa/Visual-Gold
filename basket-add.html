@@ -263,129 +263,162 @@
                 <h2 class="visually-hidden">Корзина</h2>
                 <div class="container">
                     <div class="basket__wrapper-add">
-                        <div class="basket__header">
-                            <p class="basket__text">Товар</p>
-                            <p class="basket__text">Цена</p>
-                            <p class="basket__text">Количество</p>
-                            <p class="basket__text">Подытог</p>
-                            <p class="basket__text">Удалить</p>
-                        </div>
                         <form class="basket__goods" action="#" method="get">
-                            <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото инфо-100.jpg"
-                                alt="Изображение товара">
-                            <p class="basket__goods-title">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</p>
-                            <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
-                            <div class="basket__goods--number">
-                                <label class="visually-hidden" for="input-step">Изменить количество</label>
-                                <input class="basket__goods--number-input" type="number" step="1"
-                                    min="1" max="100" name="quantity" value="1">
-                                <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
-                                    <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text basket__text-image">Товар</legend>
+                                <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото инфо-100.jpg"
+                                    alt="Изображение товара">
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text basket__text-title">Описание товара</legend>
+                                <p class="basket__goods-title">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Цена</legend>
+                                <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Количество</legend>
+                                <div class="basket__goods--number">
+                                    <label class="visually-hidden" for="input-step">Изменить количество</label>
+                                    <input class="basket__goods--number-input" type="number" step="1"
+                                        min="1" max="100" name="quantity" value="1">
+                                    <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
+                                        <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M.8 6.5 6 1l5.4 5.4" stroke="#000" stroke-miterlimit="10" />
+                                        </svg>
+                                    </span>
+                                    <span class="good-add__form-span button"
+                                        onclick="this.previousElementSibling.previousElementSibling.stepDown()">
+                                        <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5.5 6 6 .8.5" stroke="#fff" stroke-miterlimit="10" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Подытог</legend>
+                                <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Удалить</legend>
+                                <button class="basket__goods-button button" type="button">
+                                    <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M.8 6.5 6 1l5.4 5.4" stroke="#000" stroke-miterlimit="10" />
+                                        <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7"
+                                            stroke="#969797" stroke-width="2.8" stroke-miterlimit="10" />
                                     </svg>
-                                </span>
-                                <span class="good-add__form-span button"
-                                    onclick="this.previousElementSibling.previousElementSibling.stepDown()">
-                                    <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.5.5 6 6 .8.5" stroke="#fff" stroke-miterlimit="10" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
-                            <button class="basket__goods-button button" type="button">
-                                <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7"
-                                        stroke="#969797" stroke-width="2.8" stroke-miterlimit="10" />
-                                </svg>
-                                <span class="visually-hidden">Корзина для удаления товара</span>
-                            </button>
+                                    <span class="visually-hidden">Корзина для удаления товара</span>
+                                </button>
+                            </fieldset>
                         </form>
                     </div>
                     <div class="basket__wrapper-add">
-                        <div class="basket__header">
-                            <p class="basket__text">Товар</p>
-                            <p class="basket__text">Цена</p>
-                            <p class="basket__text">Количество</p>
-                            <p class="basket__text">Подытог</p>
-                            <p class="basket__text">Удалить</p>
-                        </div>
                         <form class="basket__goods" action="#" method="get">
-                            <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 3-100.jpg"
-                                alt="Изображение товара">
-                            <p class="basket__goods-title">ЛЕНТА ХРОМИРОВАННАЯ</p>
-                            <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
-                            <div class="basket__goods--number">
-                                <label class="visually-hidden" for="input-step">Изменить количество</label>
-                                <input class="basket__goods--number-input" type="number" step="1"
-                                    min="1" max="100" name="quantity" value="1">
-                                <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
-                                    <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text basket__text-image">Товар</legend>
+                                <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 3-100.jpg"
+                                    alt="Изображение товара">
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text basket__text-title">Описание товара</legend>
+                                <p class="basket__goods-title">ЛЕНТА ХРОМИРОВАННАЯ</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Цена</legend>
+                                <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Количество</legend>
+                                <div class="basket__goods--number">
+                                    <label class="visually-hidden" for="input-step">Изменить количество</label>
+                                    <input class="basket__goods--number-input" type="number" step="1"
+                                        min="1" max="100" name="quantity" value="1">
+                                    <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
+                                        <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M.8 6.5 6 1l5.4 5.4" stroke="#000" stroke-miterlimit="10" />
+                                        </svg>
+                                    </span>
+                                    <span class="good-add__form-span button"
+                                        onclick="this.previousElementSibling.previousElementSibling.stepDown()">
+                                        <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5.5 6 6 .8.5" stroke="#fff" stroke-miterlimit="10" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Подытог</legend>
+                                <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Удалить</legend>
+                                <button class="basket__goods-button button" type="button">
+                                    <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M.8 6.5 6 1l5.4 5.4" stroke="#000" stroke-miterlimit="10" />
+                                        <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7"
+                                            stroke="#969797" stroke-width="2.8" stroke-miterlimit="10" />
                                     </svg>
-                                </span>
-                                <span class="good-add__form-span button"
-                                    onclick="this.previousElementSibling.previousElementSibling.stepDown()">
-                                    <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.5.5 6 6 .8.5" stroke="#fff" stroke-miterlimit="10" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
-                            <button class="basket__goods-button button" type="button">
-                                <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7"
-                                        stroke="#969797" stroke-width="2.8" stroke-miterlimit="10" />
-                                </svg>
-                                <span class="visually-hidden">Корзина для удаления товара</span>
-                            </button>
+                                    <span class="visually-hidden">Корзина для удаления товара</span>
+                                </button>
+                            </fieldset>
                         </form>
                     </div>
                     <div class="basket__wrapper-add">
-                        <div class="basket__header">
-                            <p class="basket__text">Товар</p>
-                            <p class="basket__text">Цена</p>
-                            <p class="basket__text">Количество</p>
-                            <p class="basket__text">Подытог</p>
-                            <p class="basket__text">Удалить</p>
-                        </div>
                         <form class="basket__goods" action="#" method="get">
-                            <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 2-100.jpg"
-                                alt="Изображение товара">
-                            <p class="basket__goods-title">ЛЕНТА ЦВЕТНАЯ</p>
-                            <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
-                            <div class="basket__goods--number">
-                                <label class="visually-hidden" for="input-step">Изменить количество</label>
-                                <input class="basket__goods--number-input" type="number" step="1"
-                                    min="1" max="100" name="quantity" value="1">
-                                <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
-                                    <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text basket__text-image">Товар</legend>
+                                <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 2-100.jpg"
+                                    alt="Изображение товара">
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text basket__text-title">Описание товара</legend>
+                                <p class="basket__goods-title">ЛЕНТА ЦВЕТНАЯ</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Цена</legend>
+                                <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Количество</legend>
+                                <div class="basket__goods--number">
+                                    <label class="visually-hidden" for="input-step">Изменить количество</label>
+                                    <input class="basket__goods--number-input" type="number" step="1"
+                                        min="1" max="100" name="quantity" value="1">
+                                    <span class="good-add__form-span button" onclick="this.previousElementSibling.stepUp()">
+                                        <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M.8 6.5 6 1l5.4 5.4" stroke="#000" stroke-miterlimit="10" />
+                                        </svg>
+                                    </span>
+                                    <span class="good-add__form-span button"
+                                        onclick="this.previousElementSibling.previousElementSibling.stepDown()">
+                                        <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5.5 6 6 .8.5" stroke="#fff" stroke-miterlimit="10" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Подытог</legend>
+                                <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
+                            </fieldset>
+                            <fieldset class="basket__goods__fieldset">
+                                <legend class="basket__text">Удалить</legend>
+                                <button class="basket__goods-button button" type="button">
+                                    <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M.8 6.5 6 1l5.4 5.4" stroke="#000" stroke-miterlimit="10" />
+                                        <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7"
+                                            stroke="#969797" stroke-width="2.8" stroke-miterlimit="10" />
                                     </svg>
-                                </span>
-                                <span class="good-add__form-span button"
-                                    onclick="this.previousElementSibling.previousElementSibling.stepDown()">
-                                    <svg aria-hidden="true" focusable="false" width="12" height="7" viewBox="0 0 12 7"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.5.5 6 6 .8.5" stroke="#fff" stroke-miterlimit="10" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
-                            <button class="basket__goods-button button" type="button">
-                                <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 11.2v23M11.3 11.2v23M18.5 11.2v23M.7 6.6H22M7.4 1.7h7.7"
-                                        stroke="#969797" stroke-width="2.8" stroke-miterlimit="10" />
-                                </svg>
-                                <span class="visually-hidden">Корзина для удаления товара</span>
-                            </button>
+                                    <span class="visually-hidden">Корзина для удаления товара</span>
+                                </button>
+                            </fieldset>
                         </form>
                     </div>
                 </div>
@@ -413,78 +446,84 @@
                 <h2 class="visually-hidden">Форма заказа</h2>
                 <div class="container">
                     <form class="order__form" action="#" method="get">
-                        <fieldset class="order__form-fieldset">
-                            <legend class="order__form-legend">1. Данные покупателя</legend>
-                            <ul class="order__form-list list">
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label"
-                                        for="field-surname">Фамилия<span>*</span></label>
-                                    <input class="order__form-list__input" type="text" name="Фамилия" id="field-surname"
-                                        required="" placeholder="Иванов">
-                                </li>
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label" for="field-name">Имя<span>*</span></label>
-                                    <input class="order__form-list__input" type="text" name="Имя" id="field-name"
-                                        required="" placeholder="Иван">
-                                </li>
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label"
-                                        for="field-phone">Телефон<span>*</span></label>
-                                    <input class="order__form-list__input" type="tel" name="Tel" id="field-phone"
-                                        required="" placeholder="+7 952 456 85 75">
-                                </li>
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label" for="field-email">Электронная
-                                        почта<span>*</span></label>
-                                    <input class="order__form-list__input" type="text" name="Tel" id="field-email"
-                                        required="" placeholder="ivanivanov@gmail.com">
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class="order__form-fieldset">
-                            <legend class="order__form-legend">2. Способ и адрес доставки</legend>
-                            <ul class="order__form-list list">
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label" for="field-country">Ваша
-                                        страна<span>*</span></label>
-                                    <select class="order__form-list__select form-head__select" id="field-country" aria-label="Сортировка">
-                                        <option disabled value="Russia">Россия</option>
-                                        <option value="Belarus">Беларусь</option>
-                                    </select>
-                                </li>
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label" for="field-city">Город<span>*</span></label>
-                                    <input class="order__form-list__input" type="text" name="Имя" id="field-citye"
-                                        required="" placeholder="Новосибирск">
-                                </li>
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label" for="field-textarea">Адрес</label>
-                                    <textarea class="order__form-list__textarea" id="field-textarea" rows="4" cols="30"
-                                        placeholder="Номер дома и название улицы"></textarea>
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class="order__form-fieldset">
-                            <legend class="order__form-legend">3. Оплата</legend>
-                            <ul class="order__form-list list">
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label" for="field-pay">Способ оплаты
-                                        <span>*</span></label>
-                                    <select class="order__form-list__select form-head__select" id="field-pay" aria-label="Сортировка">
-                                        <option disabled value="cash">Оплата наличными</option>
-                                        <option value="online">Безналичная оплата</option>
-                                        <option value="delivery">Оплата при доставке</option>
-                                    </select>
-                                </li>
-                                <li class="order__form-list__item">
-                                    <label class="order__form-list__label" for="field-text">Комментарий к заказу</label>
-                                    <textarea class="order__form-list__textarea" id="field-text" rows="4" cols="30"
-                                        placeholder="">
-                                    </textarea>
-                                </li>
-                            </ul>
-                            <button class="order__form-button button">Оформить заказ</button>
-                        </fieldset>
+                        <div class="order__form-container">
+                            <fieldset class="order__form-fieldset">
+                                <legend class="order__form-legend">1. Данные покупателя</legend>
+                                <ul class="order__form-list list">
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label"
+                                            for="field-surname">Фамилия<span>*</span></label>
+                                        <input class="order__form-list__input" type="text" name="Фамилия" id="field-surname"
+                                            required="" placeholder="Иванов">
+                                    </li>
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label" for="field-name">Имя<span>*</span></label>
+                                        <input class="order__form-list__input" type="text" name="Имя" id="field-name"
+                                            required="" placeholder="Иван">
+                                    </li>
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label"
+                                            for="field-phone">Телефон<span>*</span></label>
+                                        <input class="order__form-list__input" type="tel" name="Tel" id="field-phone"
+                                            required="" placeholder="+7 952 456 85 75">
+                                    </li>
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label" for="field-email">Электронная
+                                            почта<span>*</span></label>
+                                        <input class="order__form-list__input" type="text" name="Tel" id="field-email"
+                                            required="" placeholder="ivanivanov@gmail.com">
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class="order__form-container">
+                            <fieldset class="order__form-fieldset">
+                                <legend class="order__form-legend">2. Способ и адрес доставки</legend>
+                                <ul class="order__form-list list">
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label" for="field-country">Ваша
+                                            страна<span>*</span></label>
+                                        <select class="order__form-list__select form-head__select" id="field-country" aria-label="Сортировка">
+                                            <option disabled value="Russia">Россия</option>
+                                            <option value="Belarus">Беларусь</option>
+                                        </select>
+                                    </li>
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label" for="field-city">Город<span>*</span></label>
+                                        <input class="order__form-list__input" type="text" name="Имя" id="field-citye"
+                                            required="" placeholder="Новосибирск">
+                                    </li>
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label" for="field-textarea">Адрес</label>
+                                        <textarea class="order__form-list__textarea" id="field-textarea" rows="4" cols="30"
+                                            placeholder="Номер дома и название улицы"></textarea>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class="order__form-container">
+                            <fieldset class="order__form-fieldset">
+                                <legend class="order__form-legend">3. Оплата</legend>
+                                <ul class="order__form-list list">
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label" for="field-pay">Способ оплаты
+                                            <span>*</span></label>
+                                        <select class="order__form-list__select form-head__select" id="field-pay" aria-label="Сортировка">
+                                            <option disabled value="cash">Оплата наличными</option>
+                                            <option value="online">Безналичная оплата</option>
+                                            <option value="delivery">Оплата при доставке</option>
+                                        </select>
+                                    </li>
+                                    <li class="order__form-list__item">
+                                        <label class="order__form-list__label" for="field-text">Комментарий к заказу</label>
+                                        <textarea class="order__form-list__textarea" id="field-text" rows="4" cols="30"
+                                            placeholder="">
+                                        </textarea>
+                                    </li>
+                                </ul>
+                                <button class="order__form-button button">Оформить заказ</button>
+                            </fieldset>
+                        </div>
                     </form>
                 </div>
             </section>
