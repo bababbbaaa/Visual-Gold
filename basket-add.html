@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
-    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./source/style.css">
+    <link rel="stylesheet" href="./source/style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./source/style/style.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                     <div class="container">
                         <div class="navigation__menu">
                             <a class="navigation__menu--logo logo-header" href="./index.html">
-                                <img class="logo-header__img" src="./source/svg/Лого.svg" alt="Логотип Visual Gold"
+                                <img class="logo-header__img" src="./source/assets/svg/Лого.svg" alt="Логотип Visual Gold"
                                     width="246" height="85">
                             </a>
                             <div class="navigation__menu-link menu-link">
@@ -66,7 +66,7 @@
                                         </li>
                                         <li class="nav__item">
                                             <a class="nav__item-link link" href="./goods.html">
-                                                <span class="nav__active">Товары</span>
+                                                <span class="nav__active nav__active-current-link">Товары</span>
                                             </a>
                                             <ul class="submenu__list submenu-goods submenu list">
                                                 <li class="nav__item-link submenu__item">
@@ -131,7 +131,7 @@
                                                 <span class="visually-hidden">basket</span>
                                             </a>
                                         </li>
-                                        <li class="menu-link__client--item">
+                                        <li class="menu-link__client--item popover-search">
                                             <a class="link" href="#">
                                                 <svg class="link__search" aria-hidden="true" focusable="false"
                                                     width="33" height="33" data-name="Search"
@@ -141,6 +141,23 @@
                                                 </svg>
                                                 <span class="visually-hidden">search</span>
                                             </a>
+                                            <div class="popover-container search__close">
+                                                <h3 class="visually-hidden">Поиск по сайту</h3>
+                                                <button class="search-button button" type="button">
+                                                    <span class="visually-hidden">Закрыть поиск</span>
+                                                </button>
+                                                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                                                  <label class="visually-hidden" for="popover-searchs">Поиск</label>
+                                                  <input class="search-input" placeholder="Поиск по сайту" type="search" name="search" id="popover-searchs" required="">
+                                                  <button class="search-input__close-icon" type="reset"></button>
+                                                  <button class="search-input__button button" type="button">
+                                                    <span>Найти</span>
+                                                    <svg aria-hidden="true" focusable="false" width="15" height="20" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                  </button>
+                                                </form>
+                                            </div>
                                         </li>
                                     </ul>
                                     <button class="menu-link__client-button" type="button">
@@ -265,20 +282,24 @@
                     <div class="basket__wrapper-add">
                         <form class="basket__goods" action="#" method="get">
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text basket__text-image">Товар</legend>
-                                <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото инфо-100.jpg"
+                                <legend class="visually-hidden">Товар</legend>
+                                <p class="basket__text basket__text-image">Товар</p>
+                                <img class="basket__goods-img" width="163" height="108" src="./source/assets/img/Фото инфо-100.jpg"
                                     alt="Изображение товара">
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text basket__text-title">Описание товара</legend>
-                                <p class="basket__goods-title">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</p>
+                                <legend class="visually-hidden">Описание товара</legend>
+                                <p class="basket__text basket__text-title">Описание товара</p>
+                                <p class="basket__goods-title basket__goods-title__name">ПРИНТЕР ДЛЯ ЛЕНТ И ТАБЛИЧЕК Х-2000V</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Цена</legend>
+                                <legend class="visually-hidden">Цена</legend>
+                                <p class="basket__text">Цена</p>
                                 <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Количество</legend>
+                                <legend class="visually-hidden">Количество</legend>
+                                <p class="basket__text">Количество</p>
                                 <div class="basket__goods--number">
                                     <label class="visually-hidden" for="input-step">Изменить количество</label>
                                     <input class="basket__goods--number-input" type="number" step="1"
@@ -299,11 +320,13 @@
                                 </div>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Подытог</legend>
+                                <legend class="visually-hidden">Подытог</legend>
+                                <p class="basket__text">Подытог</p>
                                 <p class="basket__goods-title basket__goods-title_price">46 700 р.</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Удалить</legend>
+                                <legend class="visually-hidden">Удалить</legend>
+                                <p class="basket__text">Удалить</p>
                                 <button class="basket__goods-button button" type="button">
                                     <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -318,20 +341,24 @@
                     <div class="basket__wrapper-add">
                         <form class="basket__goods" action="#" method="get">
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text basket__text-image">Товар</legend>
-                                <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 3-100.jpg"
+                                <legend class="visually-hidden">Товар</legend>
+                                <p class="basket__text basket__text-image">Товар</p>
+                                <img class="basket__goods-img" width="163" height="108" src="./source/assets/img/Фото 3-100.jpg"
                                     alt="Изображение товара">
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text basket__text-title">Описание товара</legend>
-                                <p class="basket__goods-title">ЛЕНТА ХРОМИРОВАННАЯ</p>
+                                <legend class="visually-hidden">Описание товара</legend>
+                                <p class="basket__text basket__text-title">Описание товара</p>
+                                <p class="basket__goods-title basket__goods-title__name">ЛЕНТА ХРОМИРОВАННАЯ</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Цена</legend>
+                                <legend class="visually-hidden">Цена</legend>
+                                <p class="basket__text">Цена</p>
                                 <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Количество</legend>
+                                <legend class="visually-hidden">Количество</legend>
+                                <p class="basket__text">Количество</p>
                                 <div class="basket__goods--number">
                                     <label class="visually-hidden" for="input-step">Изменить количество</label>
                                     <input class="basket__goods--number-input" type="number" step="1"
@@ -352,11 +379,13 @@
                                 </div>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Подытог</legend>
+                                <legend class="visually-hidden">Подытог</legend>
+                                <p class="basket__text">Подытог</p>
                                 <p class="basket__goods-title basket__goods-title_price">11 000 р.</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Удалить</legend>
+                                <legend class="visually-hidden">Удалить</legend>
+                                <p class="basket__text">Удалить</p>
                                 <button class="basket__goods-button button" type="button">
                                     <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -371,20 +400,24 @@
                     <div class="basket__wrapper-add">
                         <form class="basket__goods" action="#" method="get">
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text basket__text-image">Товар</legend>
-                                <img class="basket__goods-img" width="163" height="108" src="./source/img/Фото 2-100.jpg"
+                                <legend class="visually-hidden">Товар</legend>
+                                <p class="basket__text basket__text-image">Товар</p>
+                                <img class="basket__goods-img" width="163" height="108" src="./source/assets/img/Фото 2-100.jpg"
                                     alt="Изображение товара">
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text basket__text-title">Описание товара</legend>
-                                <p class="basket__goods-title">ЛЕНТА ЦВЕТНАЯ</p>
+                                <legend class="visually-hidden">Описание товара</legend>
+                                <p class="basket__text basket__text-title">Описание товара</p>
+                                <p class="basket__goods-title basket__goods-title__name">ЛЕНТА ЦВЕТНАЯ</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Цена</legend>
+                                <legend class="visually-hidden">Цена</legend>
+                                <p class="basket__text">Цена</p>
                                 <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Количество</legend>
+                                <legend class="visually-hidden">Количество</legend>
+                                <p class="basket__text">Количество</p>
                                 <div class="basket__goods--number">
                                     <label class="visually-hidden" for="input-step">Изменить количество</label>
                                     <input class="basket__goods--number-input" type="number" step="1"
@@ -405,11 +438,13 @@
                                 </div>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Подытог</legend>
+                                <legend class="visually-hidden">Подытог</legend>
+                                <p class="basket__text">Подытог</p>
                                 <p class="basket__goods-title basket__goods-title_price">1 200 р.</p>
                             </fieldset>
                             <fieldset class="basket__goods__fieldset">
-                                <legend class="basket__text">Удалить</legend>
+                                <legend class="visually-hidden">Удалить</legend>
+                                <p class="basket__text">Удалить</p>
                                 <button class="basket__goods-button button" type="button">
                                     <svg width="22" height="35" aria-hidden="true" focusable="false" viewBox="0 0 22 35"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -680,6 +715,7 @@
         </footer>
         <div class="modal modal-close">
             <section class="modal__container">
+                <h2 class="visually-hidden">Модальное окно входа</h2>
                 <button class="modal__form__button-close button" type="submit">
                     <span class="visually-hidden">Закрыть модальное окно</span>
                 </button>
@@ -752,9 +788,9 @@
             </section>
         </div>
     </div>
-    <script src="./source/swiper-bundle.min.js"></script>
-    <script src="./source/jquery-3.6.3.min.js"></script>
-    <script src="./source/script.js"></script>
+    <script src="./source/js/swiper-bundle.min.js"></script>
+    <script src="./source/js/jquery-3.6.3.min.js"></script>
+    <script src="./source/js/script.js" type="module"></script>
 </body>
 
 </html>

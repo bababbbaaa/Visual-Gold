@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
-    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./source/style.css">
+    <link rel="stylesheet" href="./source/style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./source/style/style.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                     <div class="container">
                         <div class="navigation__menu">
                             <a class="navigation__menu--logo logo-header" href="./index.html">
-                                <img class="logo-header__img" src="./source/svg/Лого.svg" alt="Логотип Visual Gold"
+                                <img class="logo-header__img" src="./source/assets/svg/Лого.svg" alt="Логотип Visual Gold"
                                     width="246" height="85">
                             </a>
                             <div class="navigation__menu-link menu-link">
@@ -131,7 +131,7 @@
                                                 <span class="visually-hidden">basket</span>
                                             </a>
                                         </li>
-                                        <li class="menu-link__client--item">
+                                        <li class="menu-link__client--item popover-search">
                                             <a class="link" href="#">
                                                 <svg class="link__search" aria-hidden="true" focusable="false"
                                                     width="33" height="33" data-name="Search"
@@ -141,6 +141,23 @@
                                                 </svg>
                                                 <span class="visually-hidden">search</span>
                                             </a>
+                                            <div class="popover-container search__close">
+                                                <h3 class="visually-hidden">Поиск по сайту</h3>
+                                                <button class="search-button button" type="button">
+                                                    <span class="visually-hidden">Закрыть поиск</span>
+                                                </button>
+                                                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                                                  <label class="visually-hidden" for="popover-searchs">Поиск</label>
+                                                  <input class="search-input" placeholder="Поиск по сайту" type="search" name="search" id="popover-searchs" required="">
+                                                  <button class="search-input__close-icon" type="reset"></button>
+                                                  <button class="search-input__button button" type="button">
+                                                    <span>Найти</span>
+                                                    <svg aria-hidden="true" focusable="false" width="15" height="20" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                  </button>
+                                                </form>
+                                            </div>
                                         </li>
                                     </ul>
                                     <button class="menu-link__client-button" type="button">
@@ -153,7 +170,7 @@
                 </div>
             </div>
             <div class="main-header__mobil">
-                <a class="menu-link__auth-mobil link" href="./login.html">
+                <a class="menu-link__auth-mobil link" href="#">
                     <span class="menu-link__auth-mobil__span">Вход/регистрация</span>
                     <svg class="menu-link__auth-mobil__svg" aria-hidden="true" focusable="false" width="30" height="26" data-name="Login" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.9 32.9">
                         <path d="M28.4 17.4a11.5 11.5 0 1 0-19.8 0A18.5 18.5 0 0 0 0 32.9h2.8a15.6 15.6 0 0 1 7.5-13.3 11.5 11.5 0 0 0 16.3 0A15.6 15.6 0 0 1 34.1 33h2.8a18.5 18.5 0 0 0-8.5-15.5Zm-10 2.8a8.7 8.7 0 1 1 8.7-8.7 8.7 8.7 0 0 1-8.6 8.7Z"></path>
@@ -293,22 +310,22 @@
                         <ul class="benefits__list list">
                             <li class="benefits__item">
                                 <img class="benefits__item-img" width="175" height="142"
-                                    src="./source/svg/icon-production.svg" alt="Изображение">
+                                    src="./source/assets/svg/icon-production.svg" alt="Изображение">
                                 <p class="benefits__item-text">Собственное производство</p>
                             </li>
                             <li class="benefits__item">
                                 <img class="benefits__item-img" width="174" height="143"
-                                    src="./source/svg/icon-years.svg" alt="Изображение">
+                                    src="./source/assets/svg/icon-years.svg" alt="Изображение">
                                 <p class="benefits__item-text">15 лет на&nbsp;рынке</p>
                             </li>
                             <li class="benefits__item">
                                 <img class="benefits__item-img" width="141" height="134"
-                                    src="./source/svg/icon-clients.svg" alt="Изображение">
+                                    src="./source/assets/svg/icon-clients.svg" alt="Изображение">
                                 <p class="benefits__item-text">База из 350&nbsp;клиентов</p>
                             </li>
                             <li class="benefits__item">
                                 <img class="benefits__item-img" width="187" height="127"
-                                    src="./source/svg/icon-delivery.svg" alt="Изображение">
+                                    src="./source/assets/svg/icon-delivery.svg" alt="Изображение">
                                 <p class="benefits__item-text">Доставка по&nbsp;всей&nbsp;России</p>
                             </li>
                         </ul>
@@ -330,7 +347,7 @@
                                         <div class="swiper-slide">
                                             <div class="news__cards swiper-slide">
                                                 <img class="news__link-img" width="300" height="170"
-                                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                                    src="./source/assets/img/Фото инфо-100.jpg" alt="Изображение новости">
                                                 <div class="news__text">
                                                     <h3 class="news__title">Новый принтер</h3>
                                                     <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
@@ -351,8 +368,7 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="news__cards swiper-slide">
-                                                <img class="news__link-img" width="300" height="170"
-                                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                                <img class="news__link-img" width="300" height="170" src="./source/assets/img/Фото инфо-100.jpg" alt="Изображение новости">
                                                 <div class="news__text">
                                                     <h3 class="news__title">Новый принтер</h3>
                                                     <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
@@ -373,8 +389,7 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="news__cards swiper-slide">
-                                                <img class="news__link-img" width="300" height="170"
-                                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                                <img class="news__link-img" width="300" height="170" src="./source/assets/img/Фото инфо-100.jpg" alt="Изображение новости">
                                                 <div class="news__text">
                                                     <h3 class="news__title">Новый принтер</h3>
                                                     <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
@@ -395,8 +410,7 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="news__cards swiper-slide">
-                                                <img class="news__link-img" width="300" height="170"
-                                                    src="./source/img/Фото инфо-100.jpg" alt="Изображение новости">
+                                                <img class="news__link-img" width="300" height="170" src="./source/assets/img/Фото инфо-100.jpg" alt="Изображение новости">
                                                 <div class="news__text">
                                                     <h3 class="news__title">Новый принтер</h3>
                                                     <p class="news__text">Значимость этих проблем настолько очевидна, что укрепление и
@@ -576,6 +590,7 @@
         </footer>
         <div class="modal modal-close">
             <section class="modal__container">
+                <h2 class="visually-hidden">Модальное окно входа</h2>
                 <button class="modal__form__button-close button" type="submit">
                     <span class="visually-hidden">Закрыть модальное окно</span>
                 </button>
@@ -648,9 +663,9 @@
             </section>
         </div>
     </div>
-    <script src="./source/swiper-bundle.min.js"></script>    
-    <script src="./source/jquery-3.6.3.min.js"></script>
-    <script src="./source/script.js"></script>
+    <script src="./source/js/swiper-bundle.min.js"></script>    
+    <script src="./source/js/jquery-3.6.3.min.js"></script>
+    <script src="./source/js/script.js" type="module"></script>
 </body>
 
 </html>

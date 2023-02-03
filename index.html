@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
-    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./source/style.css">
+    <link rel="stylesheet" href="./source/style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./source/style/style.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@
                     <div class="container">
                         <div class="navigation__menu">
                             <a class="navigation__menu--logo logo-header" href="./index.html">
-                                <img class="logo-header__img" src="./source/svg/Лого.svg" alt="Логотип Visual Gold"
+                                <img class="logo-header__img" src="./source/assets/svg/Лого.svg" alt="Логотип Visual Gold"
                                     width="246" height="85">
                             </a>
                             <div class="navigation__menu-link menu-link">
@@ -150,7 +150,7 @@
                                                 <span class="visually-hidden">basket</span>
                                             </a>
                                         </li>
-                                        <li class="menu-link__client--item">
+                                        <li class="menu-link__client--item popover-search">
                                             <a class="link" href="#">
                                                 <svg class="link__search" aria-hidden="true" focusable="false"
                                                     width="33" height="33" data-name="Search"
@@ -160,6 +160,23 @@
                                                 </svg>
                                                 <span class="visually-hidden">search</span>
                                             </a>
+                                            <div class="popover-container search__close">
+                                                <h3 class="visually-hidden">Поиск по сайту</h3>
+                                                <button class="search-button button" type="button">
+                                                    <span class="visually-hidden">Закрыть поиск</span>
+                                                </button>
+                                                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                                                  <label class="visually-hidden" for="popover-searchs">Поиск</label>
+                                                  <input class="search-input" placeholder="Поиск по сайту" type="search" name="search" id="popover-searchs" required="">
+                                                  <button class="search-input__close-icon" type="reset"></button>
+                                                  <button class="search-input__button button" type="button">
+                                                    <span>Найти</span>
+                                                    <svg aria-hidden="true" focusable="false" width="15" height="20" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                  </button>
+                                                </form>
+                                            </div>
                                         </li>
                                     </ul>
                                     <button class="menu-link__client-button" type="button">
@@ -292,7 +309,7 @@
                             </div>
                         </div>
                         <div class="slide__image">
-                            <img src="./source/img/Фото главное.jpg" alt="Изображение">
+                            <img src="./source/assets/img/Фото главное.jpg" alt="Изображение">
                         </div>
                     </div>
                     <div class="swiper-slide slide">
@@ -311,7 +328,7 @@
                             </div>
                         </div>
                         <div class="slide__image">
-                            <img src="./source/img/Ресурс 1-100.jpg" alt="Изображение">
+                            <img src="./source/assets/img/Ресурс 1-100.jpg" alt="Изображение">
                         </div>
                     </div>
                     <div class="swiper-slide slide">
@@ -330,7 +347,7 @@
                             </div>
                         </div>
                         <div class="slide__image">
-                            <img src="./source/img/Ресурс 2-100.jpg" alt="Изображение">
+                            <img src="./source/assets/img/Ресурс 2-100.jpg" alt="Изображение">
                         </div>
                     </div>
                 </div>
@@ -344,7 +361,7 @@
             <section class="about">
                 <div class="container">
                     <div class="about__wrapper">
-                        <img class="about__wrapper--image" width="405" height="333" src="./source/img/Фото инфо-100.jpg"
+                        <img class="about__wrapper--image" width="405" height="333" src="./source/assets/img/Фото инфо-100.jpg"
                             alt="О компании">
                         <div class="about__wrapper--info">
                             <h2 class="about__wrapper--info-title">Компания "Визуал голд"</h2>
@@ -398,7 +415,7 @@
                                     <div class="swiper-wrapper news__wrapper-cards">
                                         <div class="categories__cards swiper-slide">
                                             <a class="card__link link" href="#">
-                                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 1-100.jpg"
+                                                <img class="card__link-img" width="413" height="411" src="./source/assets/img/Фото 1-100.jpg"
                                                     alt="Изображение товара">
                                                 <div class="card__text">
                                                     <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
@@ -414,7 +431,7 @@
                                         </div>
                                         <div class="categories__cards swiper-slide">
                                             <a class="card__link link" href="#">
-                                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 2-100.jpg"
+                                                <img class="card__link-img" width="413" height="411" src="./source/assets/img/Фото 2-100.jpg"
                                                     alt="Изображение товара">
                                                 <div class="card__text">
                                                     <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
@@ -430,7 +447,7 @@
                                         </div>
                                         <div class="categories__cards swiper-slide">
                                             <a class="card__link link" href="#">
-                                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 3-100.jpg"
+                                                <img class="card__link-img" width="413" height="411" src="./source/assets/img/Фото 3-100.jpg"
                                                     alt="Изображение товара">
                                                 <div class="card__text">
                                                     <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
@@ -446,7 +463,7 @@
                                         </div>
                                         <div class="categories__cards swiper-slide">
                                             <a class="card__link link" href="#">
-                                                <img class="card__link-img" width="413" height="411" src="./source/img/Фото 4-100.jpg"
+                                                <img class="card__link-img" width="413" height="411" src="./source/assets/img/Фото 4-100.jpg"
                                                     alt="Изображение товара">
                                                 <div class="card__text">
                                                     <h3 class="card__title">Термотрансферная лента wax premium за м2</h3>
@@ -464,11 +481,9 @@
                                 </div>
                             </div>
                             <div class="categories__scroll scroll">
-                                <div class="categories__scroll-prev swiper-button-prev scroll-prev" type="button"
-                                    aria-label="Previous slide">
+                                <div class="categories__scroll-prev swiper-button-prev scroll-prev" >
                                 </div>
-                                <div class="categories__scroll-next swiper-button-next scroll-next" type="button"
-                                    aria-label="Next slide">
+                                <div class="categories__scroll-next swiper-button-next scroll-next">
                                 </div>
                             </div>
                         </div>
@@ -628,6 +643,7 @@
         </footer>
         <div class="modal modal-close">
             <section class="modal__container">
+                <h2 class="visually-hidden">Модальное окно входа</h2>
                 <button class="modal__form__button-close button" type="submit">
                     <span class="visually-hidden">Закрыть модальное окно</span>
                 </button>
@@ -700,9 +716,9 @@
             </section>
         </div>
     </div>
-    <script src="./source/swiper-bundle.min.js"></script>    
-    <script src="./source/jquery-3.6.3.min.js"></script>
-    <script src="./source/script.js"></script>
+    <script src="./source/js/swiper-bundle.min.js"></script>    
+    <script src="./source/js/jquery-3.6.3.min.js"></script>
+    <script src="./source/js/script.js" type="module"></script>
 </body>
 
 </html>

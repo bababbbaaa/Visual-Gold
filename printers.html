@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
-    <link rel="stylesheet" href="./source/style.css">
+    <link rel="stylesheet" href="./source/style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./source/style/style.css">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
                     <div class="container">
                         <div class="navigation__menu">
                             <a class="navigation__menu--logo logo-header" href="./index.html">
-                                <img class="logo-header__img" src="./source/svg/Лого.svg" alt="Логотип Visual Gold"
+                                <img class="logo-header__img" src="./source/assets/svg/Лого.svg" alt="Логотип Visual Gold"
                                     width="246" height="85">
                             </a>
                             <div class="navigation__menu-link menu-link">
@@ -130,7 +131,7 @@
                                                 <span class="visually-hidden">basket</span>
                                             </a>
                                         </li>
-                                        <li class="menu-link__client--item">
+                                        <li class="menu-link__client--item popover-search">
                                             <a class="link" href="#">
                                                 <svg class="link__search" aria-hidden="true" focusable="false"
                                                     width="33" height="33" data-name="Search"
@@ -140,6 +141,23 @@
                                                 </svg>
                                                 <span class="visually-hidden">search</span>
                                             </a>
+                                            <div class="popover-container search__close">
+                                                <h3 class="visually-hidden">Поиск по сайту</h3>
+                                                <button class="search-button button" type="button">
+                                                    <span class="visually-hidden">Закрыть поиск</span>
+                                                </button>
+                                                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                                                  <label class="visually-hidden" for="popover-searchs">Поиск</label>
+                                                  <input class="search-input" placeholder="Поиск по сайту" type="search" name="search" id="popover-searchs" required="">
+                                                  <button class="search-input__close-icon" type="reset"></button>
+                                                  <button class="search-input__button button" type="button">
+                                                    <span>Найти</span>
+                                                    <svg aria-hidden="true" focusable="false" width="15" height="20" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                  </button>
+                                                </form>
+                                            </div>
                                         </li>
                                     </ul>
                                     <button class="menu-link__client-button" type="button">
@@ -273,10 +291,12 @@
                     <div class="categories__filter">
                         <div class="categories__filter--wrapper">
                             <form class="categories__filter-form form" action="#" method="get">
-                                <span class="form-span">Сортировка по</span>
+                                <span class="form-span">Сортировка </span>
                                 <select class="form-select form-head__select" aria-label="Выбор сортировки">
-                                    <option disabled value="name">имени</option>
-                                    <option value="date">дате</option>
+                                    <option disabled value="name">по имени А-я</option>
+                                    <option value="date">по убыванию цены</option>
+                                    <option value="date">по возрастанию цены</option>
+                                    <option value="date">новые </option>
                                 </select>
                             </form>
                             <div class="categories__filter--number">
@@ -331,7 +351,7 @@
                     <div class="categories__wrapper categories__wrapper--good categories__wrapper--good-printers">
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./goods-printer.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото инфо-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото инфо-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР ДЛЯ ЛЕНТ И&nbsp;ТАБЛИЧЕК
@@ -363,7 +383,7 @@
                         </div>
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./printers.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 3-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото 3-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР 2</h3>
@@ -394,7 +414,7 @@
                         </div>
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./printers.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 4-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото 4-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР 3</h3>
@@ -425,7 +445,7 @@
                         </div>
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./printers.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото 2-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР 4</h3>
@@ -456,7 +476,7 @@
                         </div>
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./printers.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 1-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото 1-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР 5</h3>
@@ -487,7 +507,7 @@
                         </div>
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./printers.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото 2-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР 6</h3>
@@ -518,7 +538,7 @@
                         </div>
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./printers.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 3-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото 3-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР 7</h3>
@@ -549,7 +569,7 @@
                         </div>
                         <div class="categories__cards card--good card categories__cards--good-printers">
                             <a class="card__link card__link--good link" href="./printers.html">
-                                <img class="card__link-img card__link-img--good" src="./source/img/Фото 2-100.jpg"
+                                <img class="card__link-img card__link-img--good" src="./source/assets/img/Фото 2-100.jpg"
                                     alt="Изображение товара">
                                 <div class="card__text card__text--good-printers">
                                     <h3 class="card__title card__title--good-printers">ПРИНТЕР 8</h3>
@@ -773,6 +793,7 @@
         </footer>
         <div class="modal modal-close">
             <section class="modal__container">
+                <h2 class="visually-hidden">Модальное окно входа</h2>
                 <button class="modal__form__button-close button" type="submit">
                     <span class="visually-hidden">Закрыть модальное окно</span>
                 </button>
@@ -845,9 +866,9 @@
             </section>
         </div>
     </div>
-    <script src="./source/swiper-bundle.min.js"></script>    
-    <script src="./source/jquery-3.6.3.min.js"></script>
-    <script src="./source/script.js"></script>
+    <script src="./source/js/swiper-bundle.min.js"></script>    
+    <script src="./source/js/jquery-3.6.3.min.js"></script>
+    <script src="./source/js/script.js" type="module"></script>
 </body>
 
 </html>

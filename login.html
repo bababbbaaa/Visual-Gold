@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
-    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./source/style.css">
+    <link rel="stylesheet" href="./source/style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./source/style/style.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                     <div class="container">
                         <div class="navigation__menu">
                             <a class="navigation__menu--logo logo-header" href="./index.html">
-                                <img class="logo-header__img" src="./source/svg/Лого.svg" alt="Логотип Visual Gold"
+                                <img class="logo-header__img" src="./source/assets/svg/Лого.svg" alt="Логотип Visual Gold"
                                     width="246" height="85">
                             </a>
                             <div class="navigation__menu-link menu-link">
@@ -66,7 +66,7 @@
                                         </li>
                                         <li class="nav__item">
                                             <a class="nav__item-link link" href="./goods.html">
-                                                <span class="nav__active">Товары</span>
+                                                <span class="nav__active nav__active-current-link">Товары</span>
                                             </a>
                                             <ul class="submenu__list submenu-goods submenu list">
                                                 <li class="nav__item-link submenu__item">
@@ -113,7 +113,7 @@
                                 <div class="menu-link__client">
                                     <ul class="menu-link__client--list list">
                                         <li class="menu-link__client--item">
-                                            <a class="modal-button link" href="./login.html">
+                                            <a class="modal-button link" href="#">
                                                 <svg class="link__auth" aria-hidden="true" focusable="false" width="37"
                                                     height="33" data-name="Login" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 36.9 32.9">
@@ -131,7 +131,7 @@
                                                 <span class="visually-hidden">basket</span>
                                             </a>
                                         </li>
-                                        <li class="menu-link__client--item">
+                                        <li class="menu-link__client--item popover-search">
                                             <a class="link" href="#">
                                                 <svg class="link__search" aria-hidden="true" focusable="false"
                                                     width="33" height="33" data-name="Search"
@@ -141,6 +141,23 @@
                                                 </svg>
                                                 <span class="visually-hidden">search</span>
                                             </a>
+                                            <div class="popover-container search__close">
+                                                <h3 class="visually-hidden">Поиск по сайту</h3>
+                                                <button class="search-button button" type="button">
+                                                    <span class="visually-hidden">Закрыть поиск</span>
+                                                </button>
+                                                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                                                  <label class="visually-hidden" for="popover-searchs">Поиск</label>
+                                                  <input class="search-input" placeholder="Поиск по сайту" type="search" name="search" id="popover-searchs" required="">
+                                                  <button class="search-input__close-icon" type="reset"></button>
+                                                  <button class="search-input__button button" type="button">
+                                                    <span>Найти</span>
+                                                    <svg aria-hidden="true" focusable="false" width="15" height="20" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
+                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                    </svg>
+                                                  </button>
+                                                </form>
+                                            </div>
                                         </li>
                                     </ul>
                                     <button class="menu-link__client-button" type="button">
@@ -271,8 +288,8 @@
                             <fieldset class="personal-area__fieldset">
                                 <legend class="personal-area__legend">Email</legend>
                                 <div class="personal-area__email">
-                                    <label class="visually-hidden" for="email-label">Email</label>
-                                    <input class="personal-area__input personal-area__input-email" type="text" name="email" id="email-label" value="Не указано">
+                                    <label class="visually-hidden" for="email-label__form">Email</label>
+                                    <input class="personal-area__input personal-area__input-email" type="text" name="email" id="email-label__form" value="Не указано">
                                     <svg class="personal-area__input-svg" aria-hidden="true" focusable="false" width="33" height="34" viewBox="0 0 33 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6.2 33.1H.6v-5.6L20.7 7.3l5.7 5.7L6.2 33ZM32.9 6.5 27.2.8l-3.8 4 5.6 5.6 3.9-4Z"/>
                                     </svg>
@@ -510,6 +527,7 @@
         </footer>
         <div class="modal modal-close">
             <section class="modal__container">
+                <h2 class="visually-hidden">Модальное окно входа</h2>
                 <button class="modal__form__button-close button" type="submit">
                     <span class="visually-hidden">Закрыть модальное окно</span>
                 </button>
@@ -582,9 +600,9 @@
             </section>
         </div>
     </div>
-    <script src="./source/swiper-bundle.min.js"></script>    
-    <script src="./source/jquery-3.6.3.min.js"></script>
-    <script src="./source/script.js"></script>
+    <script src="./source/js/swiper-bundle.min.js"></script>    
+    <script src="./source/js/jquery-3.6.3.min.js"></script>
+    <script src="./source/js/script.js" type="module"></script>
 </body>
 
 </html>
