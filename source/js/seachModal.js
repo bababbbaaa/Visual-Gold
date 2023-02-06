@@ -8,17 +8,17 @@ modalButton.forEach((e=>e.addEventListener("click", (e=>{
 }
 )))),
 
-modalCloseBtn.addEventListener("click", function() {
-  modalClose.classList.add("search__close")
-});
-
 modalClose.addEventListener("click", (e=>{
   e.target == modalClose && modalClose.classList.contains("popover-container") && modalClose.classList.add("search__close")
 }
 ));
 
-document.addEventListener('keydown', function(event) {
-  if (event.keyCode === 27) {
+modalCloseBtn.addEventListener('click', () => {
+    modalClose.classList.add('search__close');
+})
+
+document.addEventListener('keydown', function(e) {
+  if (e.keyCode === 27) {
     modalClose.classList.add('search__close');
   }
 });

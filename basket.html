@@ -8,6 +8,10 @@
     <title>Visual Gold</title>
     <link rel="stylesheet" href="./source/style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./source/style/style.css">
+    <link rel="icon" href="./source/assets/img/favicon.ico">
+    <link rel="icon" href="./source/assets/img/favicon-32x32.png" type="image/svg+xml">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="preload" href="./source/assets/fonts/lato-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -124,8 +128,8 @@
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
-                                            <a class="link basket-add" href="./basket-add.html">
-                                                <svg class="link__card" aria-hidden="true" focusable="false" width="42" height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.9 33.5">
+                                            <a class="link" href="./basket-add.html">
+                                                <svg class="link__card  nav__active-current-link" aria-hidden="true" focusable="false" width="42" height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.9 33.5">
                                                     <path d="M17.2 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM34 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM35.2 22.2v-2.8H19.5l-1.4-2.9h18.6L41.9 2H20v2.8h17.9l-3.2 8.9H16.8L10.5 0H0v2.8h8.7l9 19.4h17.5z"></path>
                                                 </svg>
                                                 <span class="visually-hidden">basket</span>
@@ -141,27 +145,32 @@
                                                 </svg>
                                                 <span class="visually-hidden">search</span>
                                             </a>
-                                            <div class="popover-container search__close">
-                                                <h3 class="visually-hidden">Поиск по сайту</h3>
-                                                <button class="search-button button" type="button">
-                                                    <span class="visually-hidden">Закрыть поиск</span>
-                                                </button>
-                                                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-                                                  <label class="visually-hidden" for="popover-searchs">Поиск</label>
-                                                  <input class="search-input" placeholder="Поиск по сайту" type="search" name="search" id="popover-searchs" required="">
-                                                  <button class="search-input__close-icon" type="reset"></button>
-                                                  <button class="search-input__button button" type="button">
-                                                    <span>Найти</span>
-                                                    <svg aria-hidden="true" focusable="false" width="15" height="20" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 47">
-                                                        <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
-                                                    </svg>
-                                                  </button>
-                                                </form>
-                                            </div>
+
                                         </li>
                                     </ul>
+                                    <div class="popover-container search__close">
+                                        <h3 class="visually-hidden">Поиск по сайту</h3>
+                                        <button class="search-button button" type="button">
+                                            <span class="visually-hidden">Закрыть поиск</span>
+                                        </button>
+                                        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                                            <label class="visually-hidden" for="popover-searchs">Поиск</label>
+                                            <input class="search-input" placeholder="Поиск по сайту" type="search"
+                                                name="search" id="popover-searchs" required="">
+                                            <button class="search-input__close-icon" type="reset"></button>
+                                            <button class="search-input__button button" type="button">
+                                                <span>Найти</span>
+                                                <svg aria-hidden="true" focusable="false" width="15" height="20"
+                                                    data-name="arrow" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 25.6 47">
+                                                    <path d="m2 47-2-2 21.6-21.6L.2 2l2-2 23.4 23.4L2 47z"></path>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
                                     <button class="menu-link__client-button" type="button">
                                         <span class="visually-hidden">Открыть меню</span>
+                                        <span class="menu-link__client-button__span"></span>
                                     </button>
                                 </div>
                             </div>

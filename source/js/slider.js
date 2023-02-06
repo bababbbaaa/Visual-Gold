@@ -75,7 +75,7 @@ const goodsSliderThumbs = new Swiper('.goods__slider--thumbs .swiper-container',
       loop: true,
       slidesPerView: 3,
       // spaceBetween: 24,
-      spaceBetween: '6%',
+      spaceBetween: '5%',
     slideThumbActiveClass: 'swiper-slide-thumb-active',
       navigation: {
           nextEl: '.goods__slider-button-next',
@@ -87,7 +87,7 @@ const goodsSliderThumbs = new Swiper('.goods__slider--thumbs .swiper-container',
 const goodsSlider = new Swiper('.goods__slider--images .swiper-container', { // ищем слайдер превью по селектору
       loop: true,
       slidesPerView: 1,
-    spaceBetween: '6%',
+    spaceBetween: '5%',
       mousewheel: true,
       navigation: {
           nextEl: '.goods__slider-button-next',
