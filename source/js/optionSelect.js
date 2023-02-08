@@ -10,7 +10,6 @@ $(document).ready(function() {
       $this.wrap('<div class="select"></div>');
       $('<div>', {
         class: 'form-head__select--inner',
-        // text: 'Россия'
         text: $this.children('option:disabled').text(),
       }).insertAfter($this);
     
@@ -20,7 +19,6 @@ $(document).ready(function() {
       }).insertAfter(selectGap);
     
       let selectList = selectGap.next('.form-head__select--list');
-      // Add li - option items
       for (let i = 0; i < selectOptionLength; i++) {
         $('<li>', {
             class: 'form-head__select--item',
@@ -48,16 +46,28 @@ $(document).ready(function() {
             selectList.slideUp(dur);
             selectGap.removeClass('on');
           });
-    
         }
         else {
           $(this).removeClass('on');
           selectList.slideUp(dur);
         }
       });
-      $( window ).scroll(function() {
-        $( ".form-head__select--list" ).css( "display", "none" );
+      $(window).scroll(function() {
+        $( ".form-head__select--list" ).hide();
         selectGap.removeClass('on');
+      });
+      $(document).on('keyup', function(e) {
+        if ( e.key == "Escape" ) {
+          $( ".form-head__select--list" ).hide();
+          selectGap.removeClass('on');
+        }
+      });
+      $(document).mouseup(function (e) {
+        var list = $(".form-head__select--list");
+        if (list.has(e.target).length === 0){
+            list.hide();
+            selectGap.removeClass('on');
+        }
       });
     });
 });
