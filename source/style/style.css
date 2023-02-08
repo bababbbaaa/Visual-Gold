@@ -3132,6 +3132,10 @@ input::-webkit-inner-spin-button {
         padding: 17vw 11.5vw 3vw;
     }
 
+    .modal__container {
+        height: 115vw;
+    }
+
     .modal__form__button-close {
         top: 33px;
         right: 3vw;
@@ -3199,6 +3203,7 @@ input::-webkit-inner-spin-button {
     .modal__form__input-checkbox:checked~.modal__form-checkbox::before {
         width: 6.8vw;
         height: 2.9vw;
+        border-width: 0.4vw;
       }
 
     .modal__form-link {
@@ -3856,7 +3861,7 @@ input::-webkit-inner-spin-button {
         gap: 2vw;
         margin-bottom: 6vw;
     }
-    
+
     .order__form-list__item .form-head__select--item {
         padding: 2vw 3vw;
         font-size: 4.5vw;
