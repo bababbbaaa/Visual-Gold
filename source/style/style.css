@@ -4383,7 +4383,7 @@ input::-webkit-inner-spin-button {
     }
 
     .pay__list {
-        padding: revert;
+        margin: 0 5vw;
     }
 
     .pay__item, 
