@@ -4444,6 +4444,10 @@ input::-webkit-inner-spin-button {
         width: 60%;
     }
 
+    .delivery__list {
+        margin-left: 3vw;
+    }
+
     .main-footer__menu {
         flex-direction: column;
         padding: 8vw 0 8.5vw;
