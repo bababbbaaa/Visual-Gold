@@ -108,7 +108,7 @@
                                         </li>
                                         <li class="nav__item">
                                             <a class="nav__item-link link" href="./contact.html">
-                                                <span class="nav__active">Контакты</span>
+                                                <span class="nav__active nav__active-current-link">Контакты</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -117,7 +117,7 @@
                                 <div class="menu-link__client">
                                     <ul class="menu-link__client--list list">
                                         <li class="menu-link__client--item">
-                                            <a class="modal-button link" href="#">
+                                            <a class="modal-button link" href="">
                                                 <svg class="link__auth" aria-hidden="true" focusable="false" width="37"
                                                     height="33" data-name="Login" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 36.9 32.9">
@@ -128,8 +128,8 @@
                                             </a>
                                         </li>
                                         <li class="menu-link__client--item">
-                                            <a class="link" href="./basket-add.html">
-                                                <svg class="link__card  nav__active-current-link" aria-hidden="true" focusable="false" width="42" height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.9 33.5">
+                                            <a class="link basket-add" href="./basket-add.html">
+                                                <svg class="link__card" aria-hidden="true" focusable="false" width="42" height="33" data-name="Basket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.9 33.5">
                                                     <path d="M17.2 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM34 23.8a4.8 4.8 0 1 0 4.8 4.8 4.8 4.8 0 0 0-4.8-4.8Zm0 6.8a2 2 0 1 1 2-2 2 2 0 0 1-2 2ZM35.2 22.2v-2.8H19.5l-1.4-2.9h18.6L41.9 2H20v2.8h17.9l-3.2 8.9H16.8L10.5 0H0v2.8h8.7l9 19.4h17.5z"></path>
                                                 </svg>
                                                 <span class="visually-hidden">basket</span>
@@ -179,7 +179,7 @@
                 </div>
             </div>
             <div class="main-header__mobil">
-                <a class="menu-link__auth-mobil modal-button link" href="#">
+                <a class="menu-link__auth-mobil link" href="./login.html">
                     <span class="menu-link__auth-mobil__span">Вход/регистрация</span>
                     <svg class="menu-link__auth-mobil__svg" aria-hidden="true" focusable="false" width="30" height="26" data-name="Login" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.9 32.9">
                         <path d="M28.4 17.4a11.5 11.5 0 1 0-19.8 0A18.5 18.5 0 0 0 0 32.9h2.8a15.6 15.6 0 0 1 7.5-13.3 11.5 11.5 0 0 0 16.3 0A15.6 15.6 0 0 1 34.1 33h2.8a18.5 18.5 0 0 0-8.5-15.5Zm-10 2.8a8.7 8.7 0 1 1 8.7-8.7 8.7 8.7 0 0 1-8.6 8.7Z"></path>
@@ -280,16 +280,25 @@
         </header>
         <main class="main">
             <h1 class="visually-hidden">Visual Gold</h1>
-            <section class="information information__basket">
+            <section class="information contact__information">
                 <div class="container">
-                    <h2 class="information__basket--head-title">Корзина</h2>
+                    <div class="categories__head categories__head--goods contact__information-container">
+                        <ul class="breadcrumbs list">
+                            <li class="breadcrumbs-item">
+                                <a class="breadcrumbs-link link" href="./index.html">Главная</a>
+                            </li>
+                            <li class="breadcrumbs-item">
+                                <a class="breadcrumbs-link link" href="./about-us.html">Контакты</a>
+                            </li>
+                        </ul>
+                        <h2 class="categories__head-title categories__head-title--goods">Контакты</h2>
+                    </div>
                 </div>
             </section>
-            <section class="basket">
-                <h2 class="visually-hidden">Пустая корзина</h2>
+            <section class="about-us">
+                <h2 class="visually-hidden">Информация о нас</h2>
                 <div class="container">
-                    <div class="basket__wrapper">
-                        <p class="personal-area__text-order">В данный момент у Вас нет покупок</p>
+                    <div class="about-us__content">
                     </div>
                 </div>
             </section>

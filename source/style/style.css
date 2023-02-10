@@ -110,7 +110,6 @@
     display: flex;
     width: 12rem;
     height: 6rem;
-    background: #ffffff82;
 }
 
 .scroll-prev,
@@ -999,6 +998,7 @@ input::-webkit-inner-spin-button {
     font-size: 1.3vw;
     line-height: 2vw;
     color: #000000;
+    background-color: transparent;
     border: none;
     outline: none;
 }
@@ -1926,6 +1926,26 @@ input::-webkit-inner-spin-button {
     background-image: url('../assets/img/about-us.png')
 }
 
+.delivery__information {
+    margin-bottom: 1vw;
+    min-height: 9rem;
+    height: 16vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url('../assets/img/delivery.jpg')
+}
+
+.contact__information {
+    margin-bottom: 1vw;
+    min-height: 9rem;
+    height: 16vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url('../assets/img/contact.jpg')
+}
+
 .about-us__content {
     margin-left: 5rem;
     width: 63%;
@@ -2642,6 +2662,157 @@ input::-webkit-inner-spin-button {
     color: #000000;
 }
 
+.pay {
+    margin-bottom: 4vw;
+}
+
+.pay__title {
+    margin: 1.5vw 4vw 1vw;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    color: #000000;
+}
+
+.pay__content {
+    margin: 0 4vw;
+    margin-bottom: 2vw;
+}
+
+.pay__content-border {
+    padding-bottom: 1vw;
+    border-bottom: 0.15vw dotted #B1B1B0;
+}
+
+.pay__text,
+.delivery__text {
+    width: 66%;
+    margin: 0.4vw 0;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 0.97vw;
+    line-height: 1.15vw;
+    color: #000000;
+}
+
+.pay__text-inner {
+    margin: 1.5vw 0;
+}
+
+.pay__subtitle {
+    margin: 1.8vw 0 0.5vw;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.97vw;
+    line-height: 1.15vw;
+    color: #000000;
+}
+
+.pay__list {
+    margin: 0 1vw;
+    padding: 0;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 0.97vw;
+    line-height: 1.15vw;
+    color: #000000;
+}
+
+.pay__item,
+.delivery__item,
+.delivery__item-inner {
+    position: relative;
+    padding: 0.15vw;
+    font-weight: 400;
+    font-size: 0.97vw;
+    line-height: 1.15vw;
+    color: #000000;
+}
+
+.pay__list-inner {
+    margin-left: -0.3vw;
+}
+
+.pay__item .pay__list-inner {
+    padding-top: 0.2vw;
+}
+
+.pay__list-inner .pay__item,
+.delivery__list .delivery__item {
+    position: relative;
+}
+
+.pay__list-inner .pay__item::before,
+.delivery__list .delivery__item::before {
+    content: "";
+    position: absolute;
+    top: -0.3vw;
+    left: -1.55vw;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    border-radius: 50%;
+    transform: scale(0.25);
+    background-color: #B5292C;
+}
+
+.pay__subtitle-inner {
+    margin: 1.2vw 0 1.5vw;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.97vw;
+    line-height: 1.15vw;
+    color: #000000;
+}
+
+.pay__subtitle-inner__span {
+    color: #B5292C;
+}
+
+.pay__list-inner__info {
+    margin: 0 1vw;
+}
+
+.pay__list-inner__info .pay__item {
+    padding: 0.15vw;
+}
+
+.delivery {
+    padding-bottom: 4.5vw;
+    background: #F0F0F0;
+}
+
+.delivery__title {
+    padding-top: 2vw;
+    margin: 0 4vw 0.5vw;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    color: #000000;
+}
+
+.delivery__content {
+    margin: 1.4vw 4vw;
+}
+
+.delivery__text {
+    width: 61%;
+}
+
+.delivery__list {
+    margin-left: 1vw;
+}
+
+.delivery__list .delivery__item-inner {
+    margin-left: -1vw;
+}
+
+.delivery__text-info {
+    margin: 0 4vw;
+}
+
 @media (max-width: 1080px) {
     .container {
         width: 90vw;
@@ -2864,7 +3035,7 @@ input::-webkit-inner-spin-button {
         top: 3vw;
         right: 0;
         width: 7vw;
-        height: 5px;
+        height: 4px;
     }
 
     .search-form {
@@ -2968,8 +3139,7 @@ input::-webkit-inner-spin-button {
     }
     
     .menu-link__opened .menu-link__client-button__span::before {
-        background: transparent;
-        transition-duration: 0;
+        background: transparent;       
     }
 
     .menu-link__opened .menu-link__client-button__span::after {
@@ -3037,7 +3207,7 @@ input::-webkit-inner-spin-button {
     }
 
     .main {
-        margin-top: 14vw;
+        margin-top: 14vw;    
         margin-bottom: 2.5vw;
     }
 
@@ -3367,7 +3537,32 @@ input::-webkit-inner-spin-button {
 
     .about-us__information-container {
         gap: 22.5vw;
-        /* align-items: center; */
+    }
+
+    .delivery__information {
+        height: auto;
+        margin-bottom: 5vw;
+        padding-top: 4.5vw;
+        padding-bottom: 5vw;
+        background-size: 190vw;
+        background-position: right 12vw;
+    }
+
+    .delivery__information-container {
+        gap: 22.5vw;
+    }
+
+    .contact__information {
+        height: auto;
+        margin-bottom: 5vw;
+        padding-top: 4.5vw;
+        padding-bottom: 5vw;
+        background-size: 190vw;
+        background-position: right 12vw;
+    }
+
+    .contact__information-container {
+        gap: 22.5vw;
     }
 
     .about-us {
@@ -3716,14 +3911,13 @@ input::-webkit-inner-spin-button {
     }
 
     .basket__goods {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: none;
         gap: 4vw;
     }
 
     .basket__goods__fieldset {
         width: 100%;
-        grid-template-rows: none;
+        grid-template-rows: auto;
     }
 
     .basket__goods__fieldset:nth-last-child(-n+4) {
@@ -3860,6 +4054,7 @@ input::-webkit-inner-spin-button {
     .order__form-list__item {
         gap: 2vw;
         margin-bottom: 6vw;
+        width: auto;
     }
 
     .order__form-list__item .form-head__select--item {
@@ -4098,7 +4293,7 @@ input::-webkit-inner-spin-button {
     .card--good:hover, 
     .card--good:focus-within, 
     .card--good:active {
-        outline: 30px solid white;
+        outline: 15px solid white;
     }
     
     
@@ -4112,8 +4307,8 @@ input::-webkit-inner-spin-button {
         flex-direction: column;
         order: 2;
         padding: 3.5vw 0 0;
-        transform: translate(15px, 340%);
-        outline: 30px solid white;
+        transform: translate(14px, 340%);
+        outline: 15px solid white;
     }
 
     .good-add__form-wrapper {
@@ -4145,7 +4340,110 @@ input::-webkit-inner-spin-button {
         font-size: 5vw;
         line-height: 5vw;
     }
+
+    .pay {
+        margin-bottom: 7vw;
+    }
+
+    .pay__title {
+        margin: 0 2vw 1vw;
+        font-size: 6.6vw;
+        line-height: 7vw;
+    }
+
+    .pay__content {
+        margin: 0 2vw;
+    }
     
+    .pay__content-border {
+        padding-bottom: 1vw;
+    }
+
+    .pay__content-border {
+        margin-bottom: 13vw;
+        padding-bottom: 1vw;
+        border-bottom: 0.6vw dotted #B1B1B0;
+    }
+
+    .pay__text, .delivery__text {
+        width: auto;
+        margin: 0.8vw 0;
+        font-size: 4.45vw;
+        line-height: 5vw;
+    }
+
+    .pay__text-inner {
+        margin: 5.5vw 0;
+    }
+
+    .pay__subtitle {
+        margin: 5vw 0 1vw;
+        font-size: 4.5vw;
+        line-height: 5vw;
+    }
+
+    .pay__list {
+        padding: revert;
+    }
+
+    .pay__item, 
+    .delivery__item, 
+    .delivery__item-inner {
+        padding: 0;
+        font-size: 4.45vw;
+        line-height: 5vw;
+    }
+
+    .pay__list-inner {
+        margin-left: -1.6vw;
+    }
+
+    .pay__list-inner .pay__item {
+        padding: 0.6vw;
+    }
+
+    .pay__list-inner .pay__item::before, 
+    .delivery__list .delivery__item::before {
+        top: -0.4vw;
+        left: -5.5vw;
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .pay__subtitle-inner {
+        margin: 5.6vw 0 5vw;
+        font-size: 4.5vw;
+        line-height: 5vw;
+    }
+
+    .pay__list-inner__info {
+        margin: 0 3vw;
+    }
+
+    .pay__list-inner__info .pay__item {
+        padding: 0.2vw;
+    }
+
+    .delivery {
+        padding-bottom: 7.5vw;
+    }
+
+    .delivery__title {
+        font-size: 6.6vw;
+        line-height: 7vw;
+        padding-top: 5vw;
+        margin: 0 2vw 2vw;
+    }
+
+    .delivery__content {
+        margin: 1.4vw 2vw 5vw;
+    }
+
+    .delivery__text-info {
+        margin: 0 2vw;
+        width: 60%;
+    }
+
     .main-footer__menu {
         flex-direction: column;
         padding: 8vw 0 8.5vw;
