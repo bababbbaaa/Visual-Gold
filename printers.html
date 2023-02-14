@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Gold</title>
     <link rel="stylesheet" href="./source/style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./source/style/leaflet.css">
     <link rel="stylesheet" href="./source/style/style.css">
     <link rel="icon" href="./source/assets/img/favicon.ico">
     <link rel="icon" href="./source/assets/img/favicon-32x32.png" type="image/svg+xml">
@@ -282,8 +283,16 @@
             <h1 class="visually-hidden">Visual Gold goods</h1>
             <section class="information information-goods">
                 <div class="container">
-                    <div class="categories__head categories__head--goods">
+                    <div class="categories__head categories__head--goods categories__head--good">
                         <ul class="breadcrumbs list">
+                            <li class="breadcrumbs-item breadcrumbs-item__svg">
+                                <a class="breadcrumbs-link link" href="./goods.html">
+                                    <svg width="27" height="49" viewBox="0 0 27 49" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M27 2 4.5 24.5 27 47l-2 2L.5 24.5 25 0"/>
+                                      </svg>
+                                    <span class="visually-hidden">назад</span>
+                                </a>
+                            </li>
                             <li class="breadcrumbs-item">
                                 <a class="breadcrumbs-link link" href="./index.html">Главная</a>
                             </li>
@@ -695,10 +704,10 @@
                                     <a class="nav-footer__item-link link" href="#">исскуственные цветы</a>
                                 </li>
                                 <li class="nav-footer__item">
-                                    <a class="nav-footer__item-link link" href="#">Доставка и оплата</a>
+                                    <a class="nav-footer__item-link link" href="./delivery.html">Доставка и оплата</a>
                                 </li>
                                 <li class="nav-footer__item">
-                                    <a class="nav-footer__item-link link" href="#">Контакты</a>
+                                    <a class="nav-footer__item-link link" href="./contact.html">Контакты</a>
                                 </li>
                             </ul>
                             <span class="nav-footer__border"></span>
@@ -877,7 +886,8 @@
     </div>
     <script src="./source/js/swiper-bundle.min.js"></script>    
     <script src="./source/js/jquery-3.6.3.min.js"></script>
-    <script src="./source/js//jquery.simpleLoadMore.min.js"></script>
+    <script src="./source/js/jquery.simpleLoadMore.min.js"></script>
+    <script src="./source/js/leaflet.js"></script>
     <script src="./source/js/script.js" type="module"></script>
 </body>
 
