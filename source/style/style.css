@@ -203,12 +203,14 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
-/* input[type=number] {
+input[type=number] {
   -moz-appearance:textfield;
-} */
+}
 
 .breadcrumbs {
     display: flex;
@@ -226,7 +228,7 @@ input::-webkit-inner-spin-button {
 
 .breadcrumbs-item::after {
     position: absolute;
-    top: 0.3vh;
+    top: 0.3vw;
     left: 5.4vw;
     display: block;
     width: 3vw;
@@ -1831,7 +1833,6 @@ input::-webkit-inner-spin-button {
     outline: none;
     color: #000000;
     background-color: #F0F0F0;
-    /* -moz-appearance: textfield; */
 }
 
 .good-add__form-input__goods {
@@ -2992,6 +2993,11 @@ input::-webkit-inner-spin-button {
         transform: translate(-16vw, 0vw);
     }
 
+    .breadcrumbs-item__svg .breadcrumbs-link:hover::after,
+    .breadcrumbs-item__svg .breadcrumbs-link:active::after {
+        display: none;
+    }
+
     .breadcrumbs-item__svg::after {
         display: none;
     }
@@ -3004,10 +3010,11 @@ input::-webkit-inner-spin-button {
     }
 
     .categories__head--good .breadcrumbs-item::after {
-        top: 0.3vh;
-        left: 24.5vw;
+        top: 0.3vw;
+        left: 23vw;
         width: 3vw;
         height: 4vw;
+        transform: translate(18px, 0vw);
     }
 
     .active-breadcrumbs:hover::after, 
@@ -4249,6 +4256,7 @@ input::-webkit-inner-spin-button {
     .order__form-list__input, 
     .order__form-list__textarea,
     .order__form-list__item .form-head__select--inner {
+        width: 70vw;
         padding: 2vw 3vw;
         font-size: 4.5vw;
         line-height: 5vw;
@@ -4316,6 +4324,7 @@ input::-webkit-inner-spin-button {
     }
 
     .personal-area__list {
+        margin-left: 4vw;
         gap: 10vw;
     }
 
@@ -4485,7 +4494,9 @@ input::-webkit-inner-spin-button {
         display: none;
     }
 
-    .categories__cards--good-printers:hover .card--good-add {
+    .categories__cards--good-printers:hover .card--good-add,
+    .categories__cards--good-printers:focus .card--good-add,
+    .categories__cards--good-printers:focus-within .card--good-add {
         display: flex;
         flex-direction: column;
         order: 2;
