@@ -2990,12 +2990,16 @@ input[type=number] {
 
     .breadcrumbs-item__svg {
         display: flex;
-        transform: translate(-16vw, 0vw);
+        transform: translate(-17vw, -2vw);
     }
 
     .breadcrumbs-item__svg .breadcrumbs-link:hover::after,
     .breadcrumbs-item__svg .breadcrumbs-link:active::after {
         display: none;
+    }
+
+    .breadcrumbs-link svg {
+        width: 2.5vw;
     }
 
     .breadcrumbs-item__svg::after {
@@ -3011,7 +3015,7 @@ input[type=number] {
 
     .categories__head--good .breadcrumbs-item::after {
         top: 0.3vw;
-        left: 23vw;
+        left: 21vw;
         width: 3vw;
         height: 4vw;
         transform: translate(18px, 0vw);
