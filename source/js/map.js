@@ -2,7 +2,8 @@ const mapPicture = document.querySelector(".map");
 const buttonRussia = document.querySelector('.button-russia');
 const buttonBelarus = document.querySelector('.button-belarus');
 
-mapPicture.classList.remove("map__nojs");
+// mapPicture.classList.remove("map__nojs");
+
 const map = L.map('map')
   .setView({
     lat: 55.61109404304354, 
