@@ -1,7 +1,7 @@
 const categories = document.querySelector(".categories");
 const newsSelect = document.querySelector(".news");
 const goods = document.querySelector(".goods--printer");
-categories.classList.remove("categories__nojs");
+// categories.classList.remove("categories__nojs");
 // newsSelect.classList.remove("news__nojs");
 // goods.classList.remove("goods--printer__nojs");
 
