@@ -65,7 +65,7 @@ const news = new Swiper('.news__wrapper .swiper-container', {
     },
     1081: { // when window width is >= 1081px
       slidesPerView: 3,
-      spaceBetween: '3%',
+      spaceBetween: '1%',
     },
   },
 });
