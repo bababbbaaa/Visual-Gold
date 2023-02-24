@@ -3088,14 +3088,14 @@ input[type=number] {
 
     .breadcrumbs-item::after {
         top: 0.3vh;
-        left: 17.5vw;
+        right: -4.5vw;
         width: 3vw;
         height: 4vw;
     }
 
     .categories__head--good .breadcrumbs-item::after {
         top: 0.3vw;
-        left: 22vw;
+        right: -2vw;
         width: 3vw;
         height: 4vw;
         transform: translate(2vw, 0vw);
@@ -3812,6 +3812,15 @@ input[type=number] {
         gap: 22.5vw;
     }
 
+    .news__information {
+        height: auto;
+        margin-bottom: 5vw;
+        padding-top: 4.5vw;
+        padding-bottom: 5vw;
+        background-size: 190vw;
+        background-position: right 12vw;
+    }
+
     .delivery__information {
         height: auto;
         margin-bottom: 5vw;
@@ -3883,7 +3892,22 @@ input[type=number] {
     }
 
     .news {
-        padding: 1vw 0 1vw;
+        padding: 1vw 0 7vw;
+    }
+
+    .news-content {
+        margin-bottom: 9vw;
+    }
+
+    .news-content__title {
+        display: none;
+    }
+
+    .news-content__text {
+        margin: 0.5vw 1vw 4.2vw;
+        width: 100%;
+        font-size: 4.65vw;
+        line-height: 4.45vw;
     }
 
     .news__head {
@@ -3933,7 +3957,7 @@ input[type=number] {
     }
 
     .news__text {
-        margin-bottom: 11vw;
+        margin-bottom: 5vw;
         font-size: 4.2vw;
         line-height: 4.2vw;
     }
@@ -4585,7 +4609,7 @@ input[type=number] {
         flex-direction: column;
         order: 2;
         padding: 3.5vw 0 0;
-        transform: translate(14px, 627px);
+        transform: translate(14px, calc(102vw - 10px));
         outline: 15px solid white;
     }
 
